@@ -4,7 +4,7 @@
     --font-family:"Poppins", sans-serif;
 
     --background-body: #eee;
-    --background-header: #eee;
+    --background-header: #e3e2e2;
     --background-card: #e3e2e2;
 
     --text-color-blue: #00346F;
@@ -14,13 +14,6 @@
     --text-color-standard: #333;
 }
 
-.bi.bi-search{
-    padding: 5px;
-    margin: -12.5px -3px;
-    border-radius: 5px;
-    color: var(--background-body);
-    background: var(--text-color-blue);
-}
 
 *{
     margin: 0;
@@ -29,14 +22,9 @@
     font-family: var(--font-family);
     text-decoration: none;
     list-style-type: none;
+    
 }
 
-hr{
-    box-sizing: border-box; 
-    width: 100px; 
-    margin: auto;
-
-}
 
 body{
     background-color: var(--background-body);
@@ -54,24 +42,50 @@ header{
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    font-weight: 500;   
+    font-weight: 500;  
 }
 
-header img{
+header a img{
     position: absolute;
+    top: 15px;
     left: 2rem;
     width: 100px;
 }
 
-header nav,
-header a{
+header nav{
+    font-size: 1rem;
     display: flex;
-    gap: 30px;
-    transition: 0.3s;
+    gap: 50px;
     text-transform: uppercase;
-    color: var(--text-color-blue);
 }
 
+header nav a{
+    padding: 5px;
+    transition: 0.3s ease-in;
+    background-color: transparent;
+    border-bottom: 1px solid transparent;
+}
+
+header nav .zendesk-link{
+    color: var(--text-color-green);
+}
+
+header nav .help-link{
+    position: absolute;
+    right: 20px;
+}
+
+.bi.bi-search{
+    padding: 5px;
+    margin: -12.5px -3px;
+    border-radius: 5px;
+    color: var(--background-body);
+    background: var(--text-color-blue);
+}
+
+.bi.bi-question-circle{
+    color: var(--text-color-blue);
+}
 
 .search{
     display: flex;
@@ -130,6 +144,10 @@ main .card-title{
     color: var(--text-color-green);
 }
 
+#oxar{
+    color: var(--text-color-green);
+}
+
 
 section{
     margin-bottom: 80px;
@@ -158,12 +176,17 @@ section.cards div.card:hover{
     transform: scale(106%);
 }
 
-section.cards div.card.apex{
+
+section.cards div.card.apex:hover{
     border: 1px solid var(--text-color-blue);
 }
 
-section.cards div.card.grafana{
+section.cards div.card.oxar:hover{
     border: 1px solid var(--text-color-green);
+}
+
+section.cards div.card.grafana:hover{
+    border: 1px solid var(--text-color-red);
 }
 
 section.cards div.card:hover .button-apex{
@@ -171,17 +194,26 @@ section.cards div.card:hover .button-apex{
     background-color: var(--text-color-blue);
 }
 
-section.cards div.card:hover .button-grafana {
+section.cards div.card:hover .button-oxar{
     color: #fff;
     background-color: var(--text-color-green);
+}
+
+section.cards div.card:hover .button-grafana {
+    color: #fff;
+    background-color: var(--text-color-red);
 }
 
 section.cards div.card:hover .card-title-apex{
     color: var(--text-color-blue);
 }
 
-section.cards div.card:hover .card-title-grafana{
+section.cards div.card:hover .card-title-oxar{
     color: var(--text-color-green);
+}
+
+section.cards div.card:hover .card-title-grafana{
+    color: var(--text-color-red);
 }
 
 
@@ -190,9 +222,14 @@ section.cards div.card:hover ul{
     color: var(--text-color-blue);
 }
 
-section.cards div.card.grafana:hover ul{
+section.cards div.card.oxar:hover ul{
     color: var(--text-color-green);
 }
+
+section.cards div.card.grafana:hover ul{
+    color: var(--text-color-red);
+}
+
 
 section.cards div.card .icon{
     width: 64px;

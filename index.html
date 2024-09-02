@@ -5,14 +5,21 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="theme-color" content="#008F20">
     <title>Aplicações</title>
-    <link rel="stylesheet" href="./styles.css">
+    <link rel="stylesheet" href="./utils/stylesheet/styles.css">
+    <meta name="theme-color" content="#00346F" />
 </head>
 <body>
     <header>
-        <img src="./assets/img/logo_cdadistribuidora.png" alt="CDA-Distribuidora">
+        <a href=""><img src="./utils/img/logo_cdadistribuidora.png" alt="CDA-Distribuidora"></a>
         <nav>
-            <a href="#">Zendesk</a>
-            <a href="">Aplicações</a>
+            <a href="#" class="zendesk-link">Zendesk</a>
+            <a href="#">Internet</a>
+            <a href="#" class="help-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-question-circle" viewBox="0 0 16 16">
+                    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                    <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                  </svg>
+            </a>
         </nav>
     </header>
 
@@ -31,114 +38,364 @@
         </div>
 
         <h1 class="card-title" id="apex">APEX</h1>
-        <hr>
         <section class="cards">
             <div class="card apex">
                 <div class="icon">
-                    <img src="./assets/img/oracle-apex-logo.svg" alt="logo Oracle Apex">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
                 </div>
-                <h3 class="card-title-apex">Apex - Contabilidade</h3>
+                <h3 class="card-title-apex">APEX - Apoio Operacional</h3>
                 <button class="button-apex">Acessar</button>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
+                <span>Para a utilização e demandas do setor apoio operacional</span>
                 <ul>
                     <li>Apoio Operacional</li>
+                    <li>Oracle Apex</li>
                     <li>Intranet</li>
                 </ul>
             </div>
 
             <div class="card apex">
                 <div class="icon">
-                    <img src="./assets/img/oracle-apex-logo.svg" alt="logo Oracle Apex">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
                 </div>
-                <h3 class="card-title-apex">Apex - Financeiro</h3>
+                <h3 class="card-title-apex">APEX - Controladoria</h3>
                 <button class="button-apex">Acessar</button>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
+                <span>Para a utilização e demandas do setor controladoria</span>
+                <ul>
+                    <li>Controladoria</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Frota</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do setor frota</span>
+                <ul>
+                    <li>Logística</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+            
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Logística WMS</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do setor logística</span>
+                <ul>
+                    <li>Logística</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+            
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">SIMA - TI</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Aplicação utilizada para gerenciamento e manutenção por parte da equipe de TI</span>
+                <ul>
+                    <li>Tecnologia da Informação</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Metas</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para o acompanhamento e lançamento de metas</span>
+                <ul>
+                    <li>Suporte de Vendas</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Comercial</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do setor comercial</span>
+                <ul>
+                    <li>Comercial</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">Sima - RH</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do setor RH</span>
+                <ul>
+                    <li>Recursos Humanos</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+            
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">Sala de Reunião</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Uma agenda para acompanhamento de compromissos/reuniões</span>
+                <ul>
+                    <li>Todos</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Financeiro</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do setor financeiro</span>
                 <ul>
                     <li>Financeiro</li>
+                    <li>Oracle Apex</li>
                     <li>Intranet</li>
                 </ul>
             </div>
 
             <div class="card apex">
                 <div class="icon">
-                    <img src="./assets/img/oracle-apex-logo.svg" alt="logo Oracle Apex">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
                 </div>
-                <h3 class="card-title-apex">Apex - RH</h3>
+                <h3 class="card-title-apex">APEX - Imóveis</h3>
                 <button class="button-apex">Acessar</button>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
+                <span>Para a utilização e demandas da E Azevedo</span>
                 <ul>
-                    <li>Recursos Humano</li>
+                    <li>E. AZEVEDO</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Vendas</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para utilização e demandas do setor vendas</span>
+                <ul>
+                    <li>Vendas</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Suporte de Vendas</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do suporte de vendas</span>
+                <ul>
+                    <li>Suporte de Vendas</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Televendas</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do televendas</span>
+                <ul>
+                    <li>Vendas</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - ION</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para consultar informações relacionadas ao ION</span>
+                <ul>
+                    <li>Vendas</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Segurança</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Utilizado para gerar um token para um usuário da totvs</span>
+                <ul>
+                    <li>Tecnologia da Informação</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card apex">
+                <div class="icon">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-apex">APEX - Faturamento</h3>
+                <button class="button-apex">Acessar</button>
+                <span>Para a utilização e demandas do setor faturamento</span>
+                <ul>
+                    <li>Faturamento</li>
+                    <li>Oracle Apex</li>
                     <li>Intranet</li>
                 </ul>
             </div>
             
-            <div class="card apex">
-                <div class="icon">
-                    <img src="./assets/img/oracle-apex-logo.svg" alt="logo Oracle Apex">
-                </div>
-                <h3 class="card-title-apex">Apex - Vendas</h3>
-                <button class="button-apex">Acessar</button>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
-                <ul>
-                    <li>Comercial</li>
-                    <li>Consinco</li>
-                </ul>
-            </div>
 
             <div class="card apex">
                 <div class="icon">
-                    <img src="./assets/img/oracle-apex-logo.svg" alt="logo Oracle Apex">
+                    <img src="./utils/img/oracle-apex-logo.png" alt="logo Oracle Apex">
                 </div>
-                <h3 class="card-title-apex">Apex - WMS</h3>
+                <h3 class="card-title-apex">APEX - Crédito & Cobrança</h3>
                 <button class="button-apex">Acessar</button>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
+                <span>Para a utilização e demandas do setor crédito e cobrança</span>
                 <ul>
-                    <li>Comercial</li>
-                    <li>Consinco</li>
+                    <li>Crédito e Cobrança</li>
+                    <li>Oracle Apex</li>
+                    <li>Intranet</li>
                 </ul>
             </div>
-
-            <div class="card apex">
-                <div class="icon">
-                    <img src="./assets/img/oracle-apex-logo.svg" alt="logo Oracle Apex">
-                </div>
-                <h3 class="card-title-apex">Apex RH</h3>
-                <button class="button-apex">Acessar</button>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
-                <ul>
-                    <li>Comercial</li>
-                    <li>Consinco</li>
-                </ul>
-            </div>
-            
         </section>
+
+        
+            
+        <h1 class="card-title" id="oxar">APEX - OXAR</h1>
+        <section class="cards">
+             <div class="card oxar">
+                <div class="icon">
+                    <img src="./utils/img/oxar.png" alt="logo Oxar">
+                </div>
+                <h3 class="card-title-oxar">Agendamento</h3>
+                <button class="button-oxar">Acessar</button>
+                <span>Possui relatórios de agendamento para o recebimento</span>
+                <ul>
+                    <li>Apoio Operacional</li>
+                    <li>Apex - Oxar</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+             <div class="card oxar">
+                <div class="icon">
+                    <img src="./utils/img/oxar.png" alt="logo Oxar">
+                </div>
+                <h3 class="card-title-oxar">Agendador de Recebimentos</h3>
+                <button class="button-oxar">Acessar</button>
+                <span>Onde é possível agendar o recebimento de mercadorias</span>
+                <ul>
+                    <li>Apoio Operacional</li>
+                    <li>Apex - Oxar</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card oxar">
+                <div class="icon">
+                    <img src="./utils/img/oxar.png" alt="logo Oxar">
+                </div>
+                <h3 class="card-title-oxar">Agendador de Recebimentos</h3>
+                <button class="button-oxar">Acessar</button>
+                <span>Onde é possível agendar o recebimento de mercadorias</span>
+                <ul>
+                    <li>Apoio Operacional</li>
+                    <li>Apex - Oxar</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+             <div class="card oxar">
+                <div class="icon">
+                    <img src="./utils/img/oxar.png" alt="logo Oxar">
+                </div>
+                <h3 class="card-title-oxar">APEX - Solicitação de preço</h3>
+                <button class="button-oxar">Acessar</button>
+                <span>Utilizado pelos supervisores para solicitar mudança de preços ao comercial</span>
+                <ul>
+                    <li>Vendas</li>
+                    <li>Apex - Oxar</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+            </section>
 
         <h1 class="card-title" id="grafana">GRAFANA</h1>
         <section class="cards">
 
             <div class="card grafana">
                 <div class="icon">
-                    <img src="./assets/img/grafana_icon.svg" alt="logo Oracle Apex">
+                    <img src="./utils/img/grafana_icon.svg" alt="logo Oracle Apex">
                 </div>
-                <h3 class="card-title-grafana">Grafana - Dashboard</h3>
+                <h3 class="card-title-grafana">Grafana - Faturamento</h3>
                 <button class="button-grafana">Acessar</button>
-                <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
+                <span>Grafana com as informações do faturamento</span>
                 <ul>
-                    <li>Comercial</li>
-                    <li>Consinco</li>
+                    <li>Faturamento</li>
+                    <li>Grafana</li>
+                    <li>Intranet</li>
                 </ul>
             </div>
 
             <div class="card grafana">
                 <div class="icon">
-                    <img src="./assets/img/grafana_icon.svg" alt="logo Oracle Apex">
+                    <img src="./utils/img/grafana_icon.svg" alt="logo Oracle Apex">
                 </div>
                 <h3 class="card-title-grafana">Grafana - Alguma coisa</h3>
                 <button class="button-grafana">Acessar</button>
                 <span>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolore eveniet unde suscipit voluptates expedita</span>
                 <ul>
                     <li>Comercial</li>
-                    <li>Consinco</li>
+                    <li>Grafana</li>
+                    <li>Intranet</li>
+                </ul>
+            </div>
+
+            <div class="card grafana">
+                <div class="icon">
+                    <img src="./utils/img/grafana_icon.svg" alt="logo Oracle Apex">
+                </div>
+                <h3 class="card-title-grafana">Grafana - Comercial</h3>
+                <button class="button-grafana">Acessar</button>
+                <span>Grafana pertencente ao comercial</span>
+                <ul>
+                    <li>Comercial</li>
+                    <li>Grafana</li>
+                    <li>Intranet</li>
                 </ul>
             </div>
         </section>
