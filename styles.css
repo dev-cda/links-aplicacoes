@@ -4,14 +4,22 @@
     --font-family:"Poppins", sans-serif;
 
     --background-body: #eee;
-    --background-header: #ccc;
-    --background-card: #DFDFDF;
+    --background-header: #eee;
+    --background-card: #e3e2e2;
 
     --text-color-blue: #00346F;
     --text-color-green: #008F20;
     --text-color-red: #FF0013;
     --text-color-yellow: #FFCC00;
-    --text-color-standard: #434343;
+    --text-color-standard: #333;
+}
+
+.bi.bi-search{
+    padding: 5px;
+    margin: -12.5px -3px;
+    border-radius: 5px;
+    color: var(--background-body);
+    background: var(--text-color-blue);
 }
 
 *{
@@ -21,6 +29,13 @@
     font-family: var(--font-family);
     text-decoration: none;
     list-style-type: none;
+}
+
+hr{
+    box-sizing: border-box; 
+    width: 100px; 
+    margin: auto;
+
 }
 
 body{
@@ -76,14 +91,30 @@ header a{
 }
 
 .search input{
+    position: relative;
     transition: 0.3s;
     text-align: start;
-    width: 80vh;
+    width: 70vh;
     padding: 0.5rem;
     font-family: var(--font-family);
     border: 1px solid var(--color-hover);
     border-radius: 5px;
 }
+
+.search input:focus{
+    animation: width-input 1s forwards;
+}
+
+@keyframes width-input {
+    100% {
+      width: 80vh;
+    }
+}
+
+.input-wrapper h1{
+    color: var(--text-color-blue);
+}
+
 
 main .card-title{
     text-align: center;
@@ -108,24 +139,41 @@ section.cards{
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    padding: 50px;
-    gap: 30px;
+    padding: 40px;
+    gap: 35px;
 }
 
 section.cards div.card{
-    transition: 0.5s;
+    transition: 0.6s ease;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     background-color: var(--background-card);
     padding: 1rem 1.5rem;
-    border-radius: 8px;
-
+    border-radius: 20px;
 }
 
 section.cards div.card:hover{
-    transform: scale(108%);
+    transform: scale(106%);
+}
+
+section.cards div.card.apex{
+    border: 1px solid var(--text-color-blue);
+}
+
+section.cards div.card.grafana{
+    border: 1px solid var(--text-color-green);
+}
+
+section.cards div.card:hover .button-apex{
+    color: #fff;
+    background-color: var(--text-color-blue);
+}
+
+section.cards div.card:hover .button-grafana {
+    color: #fff;
+    background-color: var(--text-color-green);
 }
 
 section.cards div.card:hover .card-title-apex{
@@ -142,7 +190,9 @@ section.cards div.card:hover ul{
     color: var(--text-color-blue);
 }
 
-
+section.cards div.card.grafana:hover ul{
+    color: var(--text-color-green);
+}
 
 section.cards div.card .icon{
     width: 64px;
@@ -150,6 +200,7 @@ section.cards div.card .icon{
 }
 
 section.cards div.card img{
+    border-radius: 10px;
   width: 100%;
 }
 
@@ -160,12 +211,14 @@ section.cards div.card h3{
 
 section.cards div.card span{
     font-size: 90%;
-    font-weight: 300;
+    font-weight: 400;
     max-width: 300px;
+    margin-top: 20px;
 }
 
 section.cards div.card ul{
-    opacity: 0.8;
+    opacity: 0.9;
+    font-weight: 500;
     font-size: 15px;
     margin: 1.5rem;
 }
@@ -180,17 +233,25 @@ button{
     cursor: pointer;
     font-size: 80%;
     font-weight: 500;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
+
+/* @keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+} */
 
 .button-apex:hover{
+    /* animation: pulse 1s infinite; */
     color: #fff;
-    background-color: var(--text-color-blue);
-}
-
-.button-grafana:hover{
-    color: #fff;
-    background-color: var(--text-color-green);
+    background-color: var(--text-color-blue);   
 }
 
 @media screen and (max-width: 720px){
