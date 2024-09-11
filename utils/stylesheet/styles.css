@@ -3,9 +3,8 @@
 :root{
     --font-family:"Poppins", sans-serif;
 
-    --background-body: #eee;
-    --background-header: #e3e2e2;
-    --background-card: #e3e2e2;
+    --background-body: #f1f1f1;
+    --background-card: #E6EBE0;
 
     --text-color-blue: #00346F;
     --text-color-green: #008F20;
@@ -20,11 +19,23 @@
     padding: 0;
     box-sizing: border-box;
     font-family: var(--font-family);
+    scroll-behavior: smooth;
     text-decoration: none;
-    list-style-type: none;
-    
+    list-style: none;
 }
 
+/* 
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.01);
+    }
+    100% {
+      transform: scale(1);
+    }
+} */
 
 body{
     background-color: var(--background-body);
@@ -32,11 +43,11 @@ body{
 }
 
 header{
+    height: 4rem;
+    margin-bottom: 50px;
+    background-color: var(--background-card);
     top: 0;
     z-index: 1;
-    height: 4rem;
-    margin-bottom: 100px;
-    background-color: var(--background-header);
     position: sticky;
     display: flex;
     flex-direction: row;
@@ -53,82 +64,93 @@ header a img{
 }
 
 header nav{
-    font-size: 1rem;
     display: flex;
-    gap: 50px;
+    gap: 35px;
     text-transform: uppercase;
 }
 
 header nav a{
-    padding: 5px;
-    transition: 0.3s ease-in;
+    border-radius: 1px;
+    font-family: "Poppins";
+    color: var(--text-color-blue);
     background-color: transparent;
-    border-bottom: 1px solid transparent;
+    text-decoration: none;
 }
 
-header nav .zendesk-link{
-    color: var(--text-color-green);
-}
+/* header nav a:hover{
+    color: var(--background-body);
+    background-color: var(--text-color-blue);
+    box-shadow: 0 0 0 0.6rem var(--text-color-blue);
+} */
 
 header nav .help-link{
     position: absolute;
     right: 20px;
 }
 
-.bi.bi-search{
-    padding: 5px;
-    margin: -12.5px -3px;
-    border-radius: 5px;
-    color: var(--background-body);
-    background: var(--text-color-blue);
-}
-
-.bi.bi-question-circle{
+.bi.bi-question-circle{ 
+    transition: 0.1s ease-in-out;
     color: var(--text-color-blue);
 }
 
-.search{
+.bi.bi-question-circle:hover{
+    color: var(--text-color-green);
+}
+
+ .search{
     display: flex;
     flex-direction: column;
+    border-radius: 15px;
     text-align: center;
     align-items: center;
     margin-top: 100px;
-    margin-bottom: 100px;
+    margin-bottom: 120px;
 }
 
-
-.search img{
-    display: none;
-    top: 120px;
-    position: absolute;
-    width: 120px;
+ .input-wrapper h1{
+    font-size: 2rem;
 }
 
-.search input{
+ .search input{
     position: relative;
-    transition: 0.3s;
+    transition: 0.5s ease-in-out;
     text-align: start;
-    width: 70vh;
+    width: 30vw;
     padding: 0.5rem;
     font-family: var(--font-family);
-    border: 1px solid var(--color-hover);
-    border-radius: 5px;
+    border: 1px solid var(--text-color-blue);
+    border-radius: 0px 7px 7px 0px;
 }
 
-.search input:focus{
-    animation: width-input 1s forwards;
+ .search input:focus{
+    width: 35vw;
 }
 
-@keyframes width-input {
-    100% {
-      width: 80vh;
-    }
+.bi.bi-search{
+    padding: 8px;
+    height: 38.8px;
+    width: 40px;
+    margin: -15.3px -4.3px;
+    color: var(--background-card);
+    background: var(--text-color-blue);
+    cursor: pointer; 
+    border-radius: 7px 0px 0px 7px;
+}
+
+.box-input{
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
+.box-input input{
+    width: 70vh;
+    padding: 5px;
 }
 
 .input-wrapper h1{
     color: var(--text-color-blue);
 }
-
 
 main .card-title{
     text-align: center;
@@ -141,13 +163,12 @@ main .card-title{
 }
 
 #grafana{
-    color: var(--text-color-green);
+    color: var(--text-color-red);
 }
 
 #oxar{
     color: var(--text-color-green);
 }
-
 
 section{
     margin-bottom: 80px;
@@ -156,9 +177,10 @@ section{
 section.cards{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    padding: 40px;
-    gap: 35px;
+    gap: 30px;
+    margin: 100px 50px;
 }
 
 section.cards div.card{
@@ -168,12 +190,21 @@ section.cards div.card{
     align-items: center;
     text-align: center;
     background-color: var(--background-card);
-    padding: 1rem 1.5rem;
-    border-radius: 20px;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 0px 0px;
+    min-height: 400px;
+}
+
+.cards:has(.card:hover) .card:not(:hover){ /* sudo select has (ter), o elemento possui algum atributo hover? se sim pegue o elemento que não tem o (atributo) e faça tal coisa */
+    opacity: .9;
+    scale: .98;
 }
 
 section.cards div.card:hover{
-    transform: scale(106%);
+    /* animation: pulse 1s infinite;  */
+    transform: scale(103%);
+    background-color: #e9e9e9;
 }
 
 
@@ -204,6 +235,14 @@ section.cards div.card:hover .button-grafana {
     background-color: var(--text-color-red);
 }
 
+section.cards div.card:hover button{
+    border: none;
+}
+
+.card-title{
+    font-size: 1.7rem;
+}
+
 section.cards div.card:hover .card-title-apex{
     color: var(--text-color-blue);
 }
@@ -215,7 +254,6 @@ section.cards div.card:hover .card-title-oxar{
 section.cards div.card:hover .card-title-grafana{
     color: var(--text-color-red);
 }
-
 
 section.cards div.card:hover ul{
     opacity: 1;
@@ -230,15 +268,41 @@ section.cards div.card.grafana:hover ul{
     color: var(--text-color-red);
 }
 
-
 section.cards div.card .icon{
-    width: 64px;
-    height: 64px;
+    transition: 0.3s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: var(--background-body);
+    height: 80px;
+    width: 80px;
 }
 
-section.cards div.card img{
-    border-radius: 10px;
-  width: 100%;
+section.cards div.card.apex .icon{
+    background-image: url(../img/oracle-apex-logo.png);
+    background-size: 80%;
+}
+
+section.cards div.card.apex:hover .icon{
+    background-color: var(--text-color-blue);
+}
+
+section.cards div.card.oxar .icon{
+    background-image: url(../img/oxar.png);
+}
+
+section.cards div.card.oxar:hover .icon{
+    background-color: var(--text-color-green);
+}
+
+section.cards div.card.grafana .icon{
+    background-image: url(../img/grafana_icon.svg);
+    background-size: 50%;
+}
+
+section.cards div.card.grafana:hover .icon{
+    background-color: var(--text-color-red);
 }
 
 section.cards div.card h3{
@@ -246,18 +310,20 @@ section.cards div.card h3{
     margin: 20px 0;
 }
 
-section.cards div.card span{
+section.cards div.card span,
+section.cards div.card ul{
     font-size: 90%;
-    font-weight: 400;
     max-width: 300px;
-    margin-top: 20px;
+    margin-top: 30px;
+}
+
+section.cards div.card span{
+    font-size: 1rem;
 }
 
 section.cards div.card ul{
-    opacity: 0.9;
+    margin-top: 20px;
     font-weight: 500;
-    font-size: 15px;
-    margin: 1.5rem;
 }
 
 button{
@@ -271,27 +337,27 @@ button{
     font-size: 80%;
     font-weight: 500;
     transition: 0.3s ease;
+    border: 1px solid var(--text-color-standard);
 }
 
-/* @keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.1);
-    }
-    100% {
-      transform: scale(1);
-    }
-} */
-
 .button-apex:hover{
-    /* animation: pulse 1s infinite; */
-    color: #fff;
+    color: var(--background-body);
     background-color: var(--text-color-blue);   
 }
 
+@media screen and (max-width: 1440px){
+    
+    section.cards{
+        margin: 50px 30px;
+    }
+
+    section.cards div.card{
+        margin: 0px 0px;
+    }
+}
+
 @media screen and (max-width: 720px){
+
     header{
         justify-content: center;
     }
@@ -300,21 +366,14 @@ button{
         display: none;
     }
 
+    header nav a{
+        margin: 0px 5px;
+    }
+
     .search img{
         display: block;
     }
 
-    .input-wrapper{
-        margin-top: 50px;
-    }
-
-    .search input{
-        width: 20vh;
-    }
-
-    header a{
-        margin: 0 0 0 5px;
-    }
     section.cards{
         flex-direction: column;
     }
@@ -322,17 +381,23 @@ button{
 
 
 @media screen and (max-width: 460px){
+
+    header nav .help-link{
+        position: absolute;
+        right: 0px;
+    }
+    .search input{
+        width: 60vw;
+    }
+
     .search h1{
+        font-size: 1.5rem;
         width: 200px;
         margin: 0px auto;
     }
     .card-title{
         margin: auto;
         width: 20vh;
-    }
-
-    .search input{
-        width: 22vh;
     }
 
 }
@@ -344,5 +409,4 @@ button{
         font-size: 1rem;
         gap: 5px;
     }
-
 }
