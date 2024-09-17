@@ -1,19 +1,20 @@
-fetch('https://fakestoreapi.com/products?limit=10')
-            .then(res=>res.json())
-            .then((json) =>
-            {
-                const ul = document.getElementById('listApplications');
-                json.forEach((item) => {
-                    const li = document.createElement('li');
-                    li.innerHTML = `
-                     <a href="${item.URL}">
-                            <img width="45" src="./utils/img/oracle-apex-logo.png" alt="">
-                            <span class="item-name">${item.title}</span>
-                        </a>
-                    `;
-                    ul.appendChild(li);
-                })
-            })
+fetch('http://192.168.1.91:8080/ords/cda/cda-links/links')
+  .then(res => res.json())
+  .then((json) => {
+    const ul = document.getElementById('listApplications');
+    json.items.forEach((item) => {
+      const li = document.createElement('li');
+      li.innerHTML = `
+        <a href="${item.url}">
+          <img width="45" src="./utils/img/oracle-apex-logo.png" alt="">
+          <span class="item-name">${item.nome}</span>
+        </a>
+      `;
+      ul.appendChild(li);
+    });
+  })
+  .catch(err => console.error('Erro ao buscar dados:', err));
+
 
             function filtrar() {
                 var input,
