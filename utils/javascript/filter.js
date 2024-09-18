@@ -31,6 +31,21 @@ fetch('http://192.168.1.91:8080/ords/cda/cda-links/links')
                 input = document.getElementById('filter')
                 ul = document.getElementById('listApplications')
 
+                // Mostrar a lista quando o input for clicado ou focado
+                input.addEventListener('focus', function() {
+                  if (ul.children.length > 0) {
+                    ul.style.display = 'block';
+                  }
+                });
+
+                // Ocultar a lista quando o input perder o foco (se o clique for fora da lista)
+                input.addEventListener('blur', function(event) {
+                  setTimeout(() => {
+                    ul.style.display = 'none';
+                  }, 250); // Pequeno delay para permitir o clique nos itens da lista
+                });
+
+
                 //filtro
                 filter = input.value.toUpperCase();
 
@@ -54,7 +69,7 @@ fetch('http://192.168.1.91:8080/ords/cda/cda-links/links')
                         //se existir
                         if(span){
                             span.innerHTML = txtValue.replace(new RegExp(filter, 'gi'),(match)=>{
-                                return "<strong>" + match + "</strong>"
+                                return "" + match + ""
                             })
                         }
                     } else {
@@ -62,6 +77,12 @@ fetch('http://192.168.1.91:8080/ords/cda/cda-links/links')
                         li[i].style.display = 'none'
                     }
                 }
+
+                  // Se o input estiver vazio, ocultar a lista e parar a execução
+                  if (filter === '') {
+                    ul.style.display = 'none';
+                    return;
+                  }
 
                 //verificando se tem item na lista
                 if (count === 0){
