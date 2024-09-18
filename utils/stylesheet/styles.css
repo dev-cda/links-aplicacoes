@@ -78,11 +78,11 @@ header nav a{
     text-decoration: none;
 }
 
-/* header nav a:hover{
+ header nav a:hover{
     color: var(--background-body);
     background-color: var(--text-color-blue);
     box-shadow: 0 0 0 0.6rem var(--text-color-blue);
-} */
+} 
 
 header nav .help-link{
     position: absolute;
@@ -137,7 +137,6 @@ header nav .help-link{
 }
 
 .bi.bi-search{
-    z-index: 1;
     padding: 10px;
     height: 50px;
     width: 40px;
@@ -145,7 +144,7 @@ header nav .help-link{
     position: absolute;
     color: var(--background-card);
     background: var(--text-color-blue);
-    cursor: pointer; 
+    cursor: pointer;
     border-radius: 10px 0px 0px 10px;
 }
 
@@ -162,6 +161,10 @@ header nav .help-link{
     padding: 0;
 }
 
+#listApplications li a:hover{
+    background-color: #00346F;
+}
+
 #listApplications li a{
     display: flex;
     align-items: center;
@@ -172,7 +175,8 @@ header nav .help-link{
 }
 
 #listApplications li a:hover{
-    background-color: var(--border-color);
+    color: #fff;
+    background-color: #00346F;
 }
 
 .item-name{
