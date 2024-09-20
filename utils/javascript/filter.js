@@ -1,13 +1,12 @@
-fetch('http://192.168.1.91:8080/ords/cda/cda-links/links')
+fetch('https://fakestoreapi.com/products?limit=5')
   .then(res => res.json())
   .then((json) => {
     const ul = document.getElementById('listApplications');
-    json.items.forEach((item) => {
+    json.forEach((item) => {
       const li = document.createElement('li');
       li.innerHTML = `
         <a href="${item.url}">
-          <img width="45" src="./utils/img/oracle-apex-logo.png" alt="">
-          <span class="item-name">${item.nome}</span>
+          <span class="item-name">${item.title}</span>
         </a>
       `;
       ul.appendChild(li);
@@ -91,3 +90,7 @@ fetch('http://192.168.1.91:8080/ords/cda/cda-links/links')
                     ul.style.display = 'block'
                 }
             }
+
+
+            // pegue o elemento da lista digitado
+            // se o elemento da lista digita for igual ao do card leve o usuário até o card com o estilo de hover
