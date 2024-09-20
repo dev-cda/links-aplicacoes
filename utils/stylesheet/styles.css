@@ -45,7 +45,7 @@ body{
 
 header{
     height: 4rem;
-    background-color: var(--background-card);
+    background-color: var(--background-body);
     top: 0;
     z-index: 1;
     position: sticky;
@@ -72,8 +72,8 @@ header nav{
 header nav a{
     border-radius: 1px;
     font-family: "Poppins";
-    color: var(--text-color-standard);
-    font-weight: 400;
+    color: var(--text-color-blue);
+    font-weight: 500;
     background-color: transparent;
     text-decoration: none;
 }
@@ -106,10 +106,13 @@ header nav .help-link{
     border-radius: 15px;
     text-align: center;
     align-items: center;
+    margin-top: 60px;
     margin-bottom: 120px;
+    justify-content: center;
 }
 
  .input-wrapper h1{
+    text-transform: uppercase;
     font-size: 2rem;
     font-weight: 400;
 }
@@ -140,7 +143,7 @@ header nav .help-link{
     padding: 10px;
     height: 50px;
     width: 40px;
-    left: -10.5%;
+    left: -9.5%;
     position: absolute;
     color: var(--background-card);
     background: var(--text-color-blue);
@@ -180,6 +183,8 @@ header nav .help-link{
 }
 
 .item-name{
+    padding: 10px;
+    text-align: center;
     margin: auto;
 }
 
@@ -191,10 +196,6 @@ main .card-title{
     transition: 0.2s;
     text-align: center;
     font-weight: 450;
-}
-
-section{
-    margin-bottom: 80px;
 }
 
 section.cards{
@@ -449,8 +450,13 @@ button{
         position: absolute;
         right: 0px;
     }
+
+    .search{
+        margin-top: 100px;
+    }
+
     .search input{
-        width: 60vw;
+        width: 80vw;
     }
 
     .search h1{
@@ -465,8 +471,14 @@ button{
 
 }
 
-@media screen and (max-width: 360px){
-    
+@media screen and (max-width: 310px){
+    .search input{
+        width: 70vw;
+        margin-left: 30px;
+    }
+    .bi-search{
+        margin-left: 15px;
+    }
     header nav,
     header a{
         font-size: 1rem;
