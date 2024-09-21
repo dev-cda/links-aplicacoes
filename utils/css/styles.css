@@ -1,0 +1,575 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root{
+    --font-family:"Poppins", sans-serif;
+
+    --background-body: #e9e9e9;
+    --background-card: #f1f1f1;
+
+    --text-color-blue: #00346F;
+    --text-color-green: #008F20;
+    --text-color-red: #FF0013;
+    --text-color-yellow: #FFCC00;
+    --text-color-standard: #222;
+    --border-color: #ddd;
+}
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-family);
+    scroll-behavior: smooth;
+    text-decoration: none;
+    list-style: none;
+}
+
+/* 
+@keyframes pulse {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.01);
+    }
+    100% {
+      transform: scale(1);
+    }
+} */
+
+body{
+    background-color: var(--background-card);
+    color: var(--text-color-standard);
+}
+
+header{
+    height: 4rem;
+    background-color: var(--background-body);
+    top: 0;
+    z-index: 1;
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;  
+}
+
+header a img{
+    position: absolute;
+    top: 13px;
+    left: 2rem;
+    width: 120px;
+}
+
+header nav{
+    display: flex;
+    gap: 35px;
+    text-transform: uppercase;
+}
+
+header nav a{
+    border-radius: 1px;
+    font-family: "Poppins";
+    color: var(--text-color-blue);
+    font-weight: 500;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+ header nav a:hover{
+    color: var(--background-body);
+    background-color: var(--text-color-blue);
+    box-shadow: 0 0 0 0.6rem var(--text-color-blue);
+}
+
+header nav .link-apex:hover{
+    background-color: var(--text-color-blue);
+    box-shadow: 0 0 0 0.6rem var(--text-color-blue);
+}
+
+header nav .link-oxar:hover{
+    background-color: var(--text-color-green);
+    box-shadow: 0 0 0 0.6rem var(--text-color-green);
+}
+
+header nav .link-grafana:hover{
+    background-color: var(--text-color-red);
+    box-shadow: 0 0 0 0.6rem var(--text-color-red);
+}
+
+
+header nav hr{
+    border: 0.1px solid var(--text-color-blue);
+    border-right: none;
+}
+
+header nav .contact{
+    position: absolute;
+    right: 30px;
+}
+
+.help-link{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+.bi.bi-question-circle{ 
+    transition: 0.1s ease-in-out;
+    color: var(--text-color-blue);
+}
+
+.bi.bi-question-circle:hover{
+    color: var(--text-color-green);
+}
+
+ .search{
+    width: 100%;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 15px;
+    text-align: center;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 120px;
+    justify-content: center;
+}
+
+ .input-wrapper h1{
+    text-transform: uppercase;
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.buscar{
+    width: 100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+ .search input{
+    position: relative;
+    transition: 0.5s ease-in-out;
+    text-align: start;
+    width: 100%;
+    height: 50px;
+    padding: 0.5rem;
+    padding-left: 10px;
+    font-family: var(--font-family);
+    border: 1px solid var(--text-color-blue);
+    border-radius: 0px 10px 10px 0px;
+}
+
+.bi.bi-search{
+    padding: 10px;
+    height: 50px;
+    width: 40px;
+    left: -9.5%;
+    position: absolute;
+    color: var(--background-card);
+    background: var(--text-color-blue);
+    cursor: pointer;
+    border-radius: 10px 0px 0px 10px;
+}
+
+#listApplications{
+    z-index: 2;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    background-color: var(--background-body);
+    top: 50px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+#listApplications li{
+    border: none;
+    transition: 0.4s ease-in-out;
+}
+
+#listApplications li:hover{
+    transform: scale(107%);
+}
+
+#listApplications li a:hover{
+    border: 1px solid var(--text-color-blue);
+    background-color: #00346F;
+}
+
+section.cards div.card:hover{
+    /* animation: pulse 1s infinite;  */
+    transform: scale(103%);
+    background-color: #ececec;
+}
+
+#listApplications li a{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    color: var(--text-color-blue);
+    border-radius: 5px;
+    border: 1px solid var(--text-color-standard);
+}
+
+#listApplications li a:hover{
+    color: #fff;
+    background-color: #00346F;
+}
+
+.item-name{
+    padding: 10px;
+    text-align: center;
+    margin: auto;
+}
+
+.input-wrapper h1{
+    color: var(--text-color-blue);
+}
+
+main .description{
+    border-radius: 15px;
+    padding: 50px;
+    background-color: var(--background-body);
+    color: var(--text-color-standard);
+    font-size: 1.1rem;
+    margin: -50px 350px 100px;
+    text-align: center;
+}
+
+b,h4{
+    color: var(--text-color-blue);
+    font-weight: 600;
+}
+
+main .card-title{
+    transition: 0.2s;
+    text-align: center;
+    font-weight: 450;
+}
+
+section.cards{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 40px 25px 80px 25px;
+}
+
+section.cards div.card{
+    transition: 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background-color: var(--background-body);
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 0px 0px;
+    height: 370px;
+}
+
+.cards:has(.card:hover) .card:not(:hover){ /* sudo select has (ter), o elemento possui algum atributo hover? se sim pegue o elemento que não tem o (atributo) e faça tal coisa */
+    opacity: .9;
+    scale: .98;
+}
+
+section.cards div.card:hover{
+    /* animation: pulse 1s infinite;  */
+    transform: scale(103%);
+    background-color: #ececec;
+}
+
+section.cards div.card:hover ul{
+    scale: 1.1;
+}
+
+section.cards div.card:hover .card-title{
+    font-weight: 500;
+    scale: 1.1;
+}
+
+section.cards div.card:hover .button.apex{
+    color: #fff;
+    background-color: var(--text-color-blue);
+}
+
+section.cards div.card:hover .button.oxar{
+    color: #fff;
+    background-color: var(--text-color-green);
+}
+
+section.cards div.card:hover .button.grafana{
+    color: #fff;
+    background-color: var(--text-color-red);
+}
+
+section.cards div.card:hover.apex{
+    border: 1px solid var(--text-color-blue);
+}
+
+section.cards div.card:hover.oxar{
+    border: 1px solid var(--text-color-green);
+}
+
+section.cards div.card:hover.grafana{
+    border: 1px solid var(--text-color-red);
+}
+
+section.cards div.card .button.apex,
+section.cards div.card .button.oxar,
+section.cards div.card .button.grafana{
+    border: 1px solid var(--text-color-standard);
+}
+
+section.cards div.card.apex button:hover{
+    color: #fff;
+    background-color: var(--text-color-blue);
+}
+
+section.cards div.card.oxar button:hover{
+    color: #fff;
+    background-color: var(--text-color-green);
+}
+
+section.cards div.card.grafana button:hover{
+    color: #fff;
+    background-color: var(--text-color-red);
+}
+
+.card-title.apex{
+    color: var(--text-color-blue);
+}
+
+.card-title.oxar{
+    color: var(--text-color-green);
+}
+
+.card-title.grafana{
+    color: var(--text-color-red);
+}
+
+section.cards div.card:hover ul{
+    opacity: 1;
+    color: var(--text-color-blue);
+}
+
+section.cards div.card.oxar:hover ul{
+    color: var(--text-color-green);
+}
+
+section.cards div.card.grafana:hover ul{
+    color: var(--text-color-red);
+}
+
+section.cards div.card .icon{
+    transition: 0.3s ease-in-out;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 10px;
+    border-radius: 10px;
+    background-color: var(--background-body);
+    height: 80px;
+    width: 80px;
+}
+section.cards div.card.apex .icon,
+section.cards div.card.oxar .icon,
+section.cards div.card.grafana .icon{
+    border: 1px solid var(--text-color-standard);
+}
+
+
+section.cards div.card.apex .icon{
+    background-image: url(../img/oracle-apex-logo.png);
+    background-size: 90%;
+}
+
+section.cards div.card.apex:hover .icon{
+    background-color: var(--text-color-blue);
+}
+
+section.cards div.card.oxar .icon{
+    background-image: url(../img/oxar.png);
+}
+
+section.cards div.card.oxar:hover .icon{
+    background-color: var(--text-color-green);
+}
+
+section.cards div.card.grafana .icon{
+    background-image: url(../img/grafana_icon.svg);
+    background-size: 50%;
+}
+
+section.cards div.card.grafana:hover .icon{
+    background-color: var(--text-color-red);
+}
+
+section.cards div.card h3{
+    font-size: 1rem;
+    margin: 20px 0;
+}
+
+section.cards div.card span,
+section.cards div.card ul{
+    font-size: 90%;
+    max-width: 300px;
+}
+
+section.cards div.card span{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+section.cards div.card ul{
+    transition: 0.3s ease-in-out;
+    height: 10px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    
+}
+
+section.cards div.card.apex ul{
+    color: var(--text-color-blue);
+}
+
+section.cards div.card.oxar ul{
+    color: var(--text-color-green);
+}
+
+section.cards div.card.grafana ul{
+    color: var(--text-color-red);
+    list-style-type: disc;
+}
+
+button{
+    opacity: 0.9;
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border: 0;
+    border-radius: 5px;
+    width: 70%;
+    cursor: pointer;
+    font-size: 80%;
+    font-weight: 500;
+    transition: 0.3s ease;
+    color: var(--text-color-standard);
+}
+
+@media screen and (max-width: 1440px){
+    
+    section.cards{
+        margin: 50px 30px;
+    }
+
+    section.cards div.card{
+        margin: 0px 0px;
+    }
+}
+
+@media screen and (max-width: 900px){
+    main .description{
+        margin: -50px 100px 100px;
+    }
+}
+
+@media screen and (max-width: 720px){
+
+    header nav .contact{
+        right: 5px;
+    }
+
+    header nav .contact span{
+        display: none;
+    }
+
+    header{
+        justify-content: center;
+    }
+
+    header img{
+        display: none;
+    }
+
+    header nav a{
+        margin: 0px 8px;
+    }
+
+    .search img{
+        display: block;
+    }
+
+    section.cards{
+        flex-direction: column;
+    }
+
+    header nav .help-link{
+        position: absolute;
+        right: 7px;
+    }
+}
+
+
+@media screen and (max-width: 460px){
+    main .description{
+        margin: -50px 25px 100px;
+    }
+
+    .search{
+        margin-top: 100px;
+    }
+
+    .bi-search{
+        margin-left: 15px;
+    }
+
+    .search input{
+        margin-left: 20px;
+        width: 80vw;
+    }
+
+    .search h1{
+        font-size: 1.8rem;
+        margin: 0px auto;
+    }
+    .card-title{
+        margin: auto;
+        width: 20vh;
+    }
+
+}
+
+@media screen and (max-width: 360px){
+
+    .search input{
+        width: 70vw;
+        margin-left: 30px;
+    }
+
+    header nav .help-link{
+        position: absolute;
+        right: 4px;
+    }
+    
+    .bi-search{
+        margin-left: 16px;
+    }
+    header nav,
+    header a{
+        font-size: 1rem;
+        gap: 5px;
+    }
+}
