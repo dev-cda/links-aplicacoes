@@ -1,3 +1,6 @@
+document.querySelectorAll(".lista-menu__link").forEach(a => a.setAttribute("target", "_blank"))
+document.querySelectorAll(".button").forEach(a => a.setAttribute("target", "_blank"))
+
 fetch('https://fakestoreapi.com/products?limit=5')
   .then(res => res.json())
   .then((json) => {
