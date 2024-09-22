@@ -14,7 +14,6 @@
     --border-color: #ddd;
 }
 
-
 *{
     margin: 0;
     padding: 0;
@@ -70,6 +69,7 @@ header nav{
 }
 
 header nav a{
+    margin: 0px 15px ;
     border-radius: 1px;
     font-family: "Poppins";
     color: var(--text-color-blue);
@@ -110,7 +110,7 @@ header nav .contact{
     right: 30px;
 }
 
-.help-link{
+.internet-link{
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -118,6 +118,84 @@ header nav .contact{
     gap: 10px;
 }
 
+/* */
+
+.container__botao:checked~.container__rotulo {
+    background: #fff;
+}
+
+.intranet {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    right: 20px;
+    font-family: 'Lato', sans-serif;
+}
+
+.lista-menu {
+    display: none;
+    position: absolute;
+    top: 102%;
+    width: 60vw;
+}
+
+.container__botao:checked~.lista-menu {
+    display: block;
+}
+
+.lista-menu__titulo,
+.lista-menu__item { 
+    border-radius: 3px;
+    text-align: center;
+    transition: 0.1s;
+    width: auto;
+    background-color: var(--background-body);
+    border: 1px solid var(--text-color-blue);
+}
+
+.lista-menu__item{
+    transition: 0.2s ease-in;
+}
+
+.lista-menu__item:hover{
+    transform: scale(108%);
+}
+
+.lista-menu__titulo {
+    font-weight: 700;
+}
+
+.lista-menu__link {
+    background: var(--text-color-blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+    
+.container__botao {
+    display: none;
+}
+
+.container__titulo {
+    display: none;
+}
+
+.opções {
+    display: none;
+}
+
+.container__texto {
+    display: none;
+}
+
+.opções__item{
+    border-radius: 3px;
+    color: var(--text-color-blue);
+}
+/* */
 
 .bi.bi-question-circle{ 
     transition: 0.1s ease-in-out;
@@ -145,7 +223,7 @@ header nav .contact{
     margin-left: -30px;
     text-transform: uppercase;
     font-size: 2rem;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 .buscar{
@@ -205,7 +283,7 @@ header nav .contact{
 }
 
 #listApplications li:hover{
-    transform: scale(107%);
+    transform: scale(102%);
 }
 
 #listApplications li a:hover{
@@ -251,6 +329,7 @@ main .description{
     font-size: 1.1rem;
     margin: -50px 350px 100px;
     text-align: center;
+    line-height: 120%;
 }
 
 b,h4{
@@ -281,9 +360,9 @@ section.cards div.card{
     text-align: center;
     background-color: var(--background-body);
     padding: 1.5rem;
-    border-radius: 25px;
+    border-radius: 15px;
     margin: 0px 0px;
-    height: 370px;
+    min-height: 370px;
 }
 
 .cards:has(.card:hover) .card:not(:hover){ /* sudo select has (ter), o elemento possui algum atributo hover? se sim pegue o elemento que não tem o (atributo) e faça tal coisa */
@@ -390,7 +469,7 @@ section.cards div.card .icon{
     padding: 10px;
     border-radius: 10px;
     background-color: var(--background-body);
-    height: 80px;
+    min-height: 80px;
     width: 80px;
 }
 section.cards div.card.apex .icon{
@@ -468,7 +547,7 @@ section.cards div.card.grafana ul{
     list-style-type: disc;
 }
 
-button{
+.button{
     opacity: 0.9;
     padding: 0.5rem 1rem;
     text-transform: uppercase;
@@ -481,8 +560,50 @@ button{
     transition: 0.3s ease;
 }
 
+.footer {
+    display: flex;
+    width: 100%;
+    padding: 1.5rem 6rem;
+    justify-content: center;
+    align-items: center;
+    background: var(--background-body);
+}
+
+.footer-text {
+    color: var(--text-color-blue);
+    text-align: center;
+    font-family: Montserrat;
+    font-size: 1.3rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+}
+
+@media screen and (min-width: 1728px) {
+    .lista-menu__item{
+    padding: 10px;
+}
+
+    .container__link {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+    }
+
+    .intranet {
+        padding: 0 2em;
+    }
+
+    .container__texto {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 1440px){
-    
+    .lista-menu__item{
+        padding: 10px;
+    }
+
     section.cards{
         margin: 50px 30px;
     }
@@ -492,7 +613,84 @@ button{
     }
 }
 
+@media screen and (min-width: 1024px) {
+    .lista-menu__item{
+        padding: 3px;
+    }
+
+    .container__titulo {
+        color: var(--text-color-blue);
+        margin-left: 100px;
+        font-family: var(--fonte-secundario);
+        font-size: 30px;
+    }
+
+    .container__titulo {
+        position: absolute;
+        font-weight: 400;
+        display: block;
+        margin-left: 50px;
+    }
+
+    .opções {
+        display: flex;
+    }
+
+    .opções__item {
+        display: flex;
+        transition: 0.6s;
+        cursor: pointer;
+        align-items: center;
+        justify-content: center;
+        text-transform: uppercase;
+        gap: 10px;
+    }
+
+    .opções__link {
+        position: absolute;
+        text-decoration: none;
+        color: var(--text-color-blue);
+    }
+
+    .opções__link:hover{
+        color: var(--color-links);
+    }
+
+
+    .opções__botão:checked~.lista-menu {
+        display: block;
+        width: auto;
+    }
+
+    .opções__botão {
+        display: none;
+    }
+
+    .opções__botão:checked~.opções__rotulo>.opções__item {
+        color: #ccc;
+        background: var(--text-color-blue);
+    }
+
+    .opções__item {
+        padding: 12px 2em;
+    }
+    
+    .lista-menu__item:hover {
+        background: var(--text-color-blue);
+    }
+
+    .lista-menu__item:hover>.lista-menu__link {
+        background-color: #fff;
+        text-decoration: none;
+    }
+
+}
+
 @media screen and (max-width: 900px){
+    .lista-menu__item{
+        padding: 6px;
+    }
+    
     main .description{
         margin: -50px 100px 100px;
     }
@@ -583,7 +781,7 @@ button{
         gap: 5px;
     }
 
-    header nav .help-link{
+    header nav .internet-link{
         opacity: 0;
     }
     
