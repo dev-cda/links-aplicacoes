@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDA - APLICAÇÕES</title>
+    <title>CDA - Aplicações</title>
     <link rel="shortcut icon" type="png" href="./utils/img/logo_cda.png">
     <link rel="stylesheet" href="./utils/css/styles.css">
     <script src="./utils/js/filter.js" defer></script>
@@ -13,17 +13,63 @@
         <div class="cabecalho">
             <a href="#"><img src="./utils/img/logo_cdadistribuidora.png" alt="CDA-Distribuidora"></a>
             <nav>
-                <a href="#apex" class="link-apex">APEX</a><hr>
-                <a href="#oxar" class="link-oxar">OXAR</a><hr>
+                <a href="#apex" class="link-apex">APEX</a>
+                <a href="#oxar" class="link-oxar">OXAR</a>
                 <a href="#grafana" class="link-grafana">GRAFANA</a>
-                <div class="contact">
-                    <a href="#" class="help-link"><span>SUPORTE</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
-                            <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
-                        </svg>
-                    </a>
-                </div>
             </nav>
+        </div>
+
+        <div class="intranet">
+            <ul class="opções">
+                <input type="checkbox" id="opções-menu" class="opções__botão">
+                <label for="opções-menu" class="opções__rotulo">
+                    <li class="opções__item">Links Internet</li>
+                </label>
+                <ul class="lista-menu">
+                    <li class="lista-menu__item">
+                        <a href="https://www.parnamirim.rn.gov.br/#/" class="lista-menu__link">Prefeitura de Parnamirim</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.natal.rn.gov.br/" class="lista-menu__link">Prefeitura de Natal</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.natal.rn.gov.br/semut/" class="lista-menu__link">Secretaria de Natal</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.gov.br/receitafederal/pt-br" class="lista-menu__link">Receita Federal</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://tdn.totvs.com/pages/releaseview.action?pageId=556376230" class="lista-menu__link">Consinco</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.bb.com.br/site/" class="lista-menu__link">Banco do Brasil</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://banco.bradesco/html/classic/index.shtm" class="lista-menu__link">Bradesco</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.claro.com.br/empresas" class="lista-menu__link">Claro empresas</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="http://www.gruponordestetelecom.com.br/" class="lista-menu__link">GNS Brasil</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.serasaexperian.com.br/" class="lista-menu__link">Serasa Experian</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.nfe.fazenda.gov.br/portal/principal.aspx" class="lista-menu__link">NF-e SEFAZ</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://192.168.1.50/eFormsColdweb/Account/Login" class="lista-menu__link">NDD Digital eCold</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://192.168.1.50/eFormseMonitor/Account/Login" class="lista-menu__link">NDD Digital e-monitor</a>
+                    </li>
+                    <li class="lista-menu__item">
+                        <a href="https://www.sefaz.rn.gov.br/contentProducao/aplicacao/set_v2/principal/enviados/index.asp" class="lista-menu__link">Secretaria do RN</a>
+                    </li>
+                </ul>
+            </ul>
         </div>
     </header>
     
@@ -59,8 +105,8 @@
             
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Apoio Operacional</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Apoio Operacional</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=127:LOGIN_DESKTOP:14419115950046:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor apoio operacional</span>
                 <ul>
                     <li>Apoio Operacional</li>
@@ -70,8 +116,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Controladoria</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Controladoria</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=105:13:7627758951975:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor controladoria</span>
                 <ul>
                     <li>Controladoria</li>
@@ -81,8 +127,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Frota</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Frota</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=103:1:10486018797972:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor frota</span>
                 <ul>
                     <li>Logística</li>
@@ -92,8 +138,8 @@
             
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Logística WMS</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Logística WMS</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=201:LOGIN_DESKTOP:4749278614831:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor logística</span>
                 <ul>
                     <li>Logística</li>
@@ -104,7 +150,7 @@
             <div class="card apex">
                 <div class="icon"></div>
                 <h3 class="card-title apex">SIMA - TI</h3>
-                <button class="button apex">Acessar</button>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=104">Acessar</a>
                 <span>Utilizada para gerenciamento e manutenção da equipe de TI</span>
                 <ul>
                     <li>Tecnologia</li>
@@ -115,8 +161,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Metas</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Metas</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=179:LOGIN_DESKTOP:14656734396980:::::">Acessar</a>
                 <span>Para o acompanhamento e lançamento de metas</span>
                 <ul>
                     <li>Suporte de Vendas</li>
@@ -126,8 +172,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Comercial</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Comercial</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=109:LOGIN_DESKTOP:11247251604556:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor comercial</span>
                 <ul>
                     <li>Comercial</li>
@@ -137,8 +183,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">RH</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">Sima - RH</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=102:LOGIN_DESKTOP:2896513722644:::::">Acessar</a>
                 <span>Utilização e demandas do setor de Recuros Humanos</span>
                 <ul>
                     <li>Recursos Humanos</li>
@@ -148,9 +194,9 @@
             
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Sala de Reunião</h3>
-                <button class="button apex">Acessar</button>
-                <span>Para acompanhamento de compromissos/reuniões</span>
+                <h3 class="card-title apex">APEX - Sala de Reunião</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=159:1">Acessar</a>
+                <span>Uma agenda para acompanhamento de compromissos/reuniões</span>
                 <ul>
                     <li>Todos</li>
                     <li>Intranet</li>
@@ -159,8 +205,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Financeiro</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Financeiro</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=123:LOGIN_DESKTOP:2579330133645:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor financeiro</span>
                 <ul>
                     <li>Financeiro</li>
@@ -170,8 +216,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Imóveis</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Imóveis</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=116:1:5208263109915:::::">Acessar</a>
                 <span>Para a utilização e demandas da E Azevedo</span>
                 <ul>
                     <li>E. AZEVEDO</li>
@@ -181,8 +227,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Vendas</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Vendas</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=131:3:8087539991616:::::">Acessar</a>
                 <span>Para utilização e demandas do setor vendas</span>
                 <ul>
                     <li>Vendas</li>
@@ -192,8 +238,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Suporte de Vendas</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Suporte de Vendas</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=302:LOGIN_DESKTOP:7728292815424:::::">Acessar</a>
                 <span>Para a utilização e demandas do suporte de vendas</span>
                 <ul>
                     <li>Suporte de Vendas</li>
@@ -203,8 +249,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Televendas</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Televendas</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=129:2:16210414061887:::::">Acessar</a>
                 <span>Para a utilização e demandas do televendas</span>
                 <ul>
                     <li>Vendas</li>
@@ -214,8 +260,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">ION</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - ION</h3>
+                <a class="button apex" href="http://192.168.1.82/ords/wms/r/apex-ion/login">Acessar</a>
                 <span>Para consultar informações relacionadas ao ION</span>
                 <ul>
                     <li>Vendas</li>
@@ -225,8 +271,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Segurança</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Segurança</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=142:2:14735657640166:::::">Acessar</a>
                 <span>Utilizado para gerar um token para um usuário da totvs</span>
                 <ul>
                     <li>Tecnologia da Informação</li>
@@ -236,8 +282,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Faturamento</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Faturamento</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=151:LOGIN_DESKTOP:604569085506:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor faturamento</span>
                 <ul>
                     <li>Faturamento</li>
@@ -248,8 +294,8 @@
 
             <div class="card apex">
                 <div class="icon"></div>
-                <h3 class="card-title apex">Crédito & Cobrança</h3>
-                <button class="button apex">Acessar</button>
+                <h3 class="card-title apex">APEX - Crédito & Cobrança</h3>
+                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=175:LOGIN_DESKTOP:16942620506287:::::">Acessar</a>
                 <span>Para a utilização e demandas do setor crédito e cobrança</span>
                 <ul>
                     <li>Crédito e Cobrança</li>
@@ -265,8 +311,8 @@
         <section class="cards">
              <div class="card oxar">
                 <div class="icon"></div>
-                <h3 class="card-title oxar">Agendamento</h3>
-                <button class="button oxar">Acessar</button>
+                <h3 class="card-title oxar">OXAR - Agendamento</h3>
+                <a class="button oxar" href="https://oxar.appetiteapex.com/ords/f?p=202:LOGIN_DESKTOP:8253593899961:::::">Acessar</a>
                 <span>Possui relatórios de agendamento para o recebimento</span>
                 <ul>
                     <li>Apoio Operacional</li>
@@ -275,8 +321,8 @@
             </div>
              <div class="card oxar">
                 <div class="icon"></div>
-                <h3 class="card-title oxar">Agendador de Recebimentos</h3>
-                <button class="button oxar">Acessar</button>
+                <h3 class="card-title oxar">OXAR - Agendador de Recebimentos</h3>
+                <a class="button oxar" href="https://oxar.appetiteapex.com/ords/f?p=139:1:23506254303631:::::">Acessar</a>
                 <span>Onde é possível agendar o recebimento de mercadorias</span>
                 <ul>
                     <li>Apoio Operacional</li>
@@ -286,25 +332,15 @@
 
             <div class="card oxar">
                 <div class="icon"></div>
-                <h3 class="card-title oxar">Agendador de Recebimentos</h3>
-                <button class="button oxar">Acessar</button>
-                <span>Onde é possível agendar o recebimento de mercadorias</span>
+                <h3 class="card-title oxar">OXAR - Solicitação de preço</h3>
+                <a class="button oxar" href="https://oxar.appetiteapex.com/ords/f?p=110:LOGIN_DESKTOP:436864455025:::::">Acessar</a>
+                <span>Utilizado pelos supervisores para solicitar mudança de preços ao comercial</span>
                 <ul>
                     <li>Apoio Operacional</li>
                     <li>Intranet</li>
                 </ul>
             </div>
 
-             <div class="card oxar">
-                <div class="icon"></div>
-                <h3 class="card-title oxar">Solicitação de preço</h3>
-                <button class="button oxar">Acessar</button>
-                <span>Utilizado pelos supervisores para solicitar mudança de preços ao comercial</span>
-                <ul>
-                    <li>Vendas</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
             </section>
 
         <h1 class="card-title grafana" id="grafana">GRAFANA</h1>
@@ -312,8 +348,8 @@
             
             <div class="card grafana">
                 <div class="icon"></div>
-                <h3 class="card-title grafana">Faturamento</h3>
-                <button class="button grafana">Acessar</button>
+                <h3 class="card-title grafana">Grafana - Faturamento</h3>
+                <a class="button grafana" href="http://192.168.1.55:3000/d/uju5z4qmk/ds-cda-faturamento?orgId=1&refresh=5s">Acessar</a>
                 <span>Grafana com as informações do faturamento</span>
                 <ul>
                     <li>Faturamento</li>
@@ -323,28 +359,22 @@
 
             <div class="card grafana">
                 <div class="icon"></div>
-                <h3 class="card-title grafana">Faturamento</h3>
-                <button class="button grafana">Acessar</button>
-                <span>Grafana com as informações do faturamento</span>
+                <h3 class="card-title grafana">Grafana - Comercial</h3>
+                <a class="button grafana" href="http://192.168.1.55:3000/d/GlKtcHWWk/ds-comercial?orgId=1&refresh=1m">Acessar</a>
+                <span>Grafana pertencente ao comercial</span>
                 <ul>
-                    <li>Faturamento</li>
+                    <li>Comercial</li>
                     <li>Intranet</li>
                 </ul>
             </div>
-
-            <div class="card grafana">
-                <div class="icon"></div>
-                <h3 class="card-title grafana">Faturamento</h3>
-                <button class="button grafana">Acessar</button>
-                <span>Grafana com as informações do faturamento</span>
-                <ul>
-                    <li>Faturamento</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
         </section>
     </main>
+
+    <footer class="footer">
+        <p class="footer-text">
+            © 2024 CDA Distribuidora. Todos os direitos reservados. 
+        </p>
+    </footer>
 
 </body>
 </html>
