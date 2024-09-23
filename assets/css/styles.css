@@ -24,19 +24,6 @@
     list-style: none;
 }
 
-/* 
-@keyframes pulse {
-    0% {
-      transform: scale(1);
-    }
-    50% {
-      transform: scale(1.01);
-    }
-    100% {
-      transform: scale(1);
-    }
-} */
-
 body{
     background-color: var(--background-card);
     color: var(--text-color-standard);
@@ -57,9 +44,9 @@ header{
 
 header a img{
     position: absolute;
-    top: 13px;
+    top: 15px;
     left: 2rem;
-    width: 120px;
+    width: 100px;
 }
 
 header nav{
@@ -117,8 +104,6 @@ header nav .contact{
     justify-content: center;
     gap: 10px;
 }
-
-/* */
 
 .container__botao:checked~.container__rotulo {
     background: #fff;
@@ -195,7 +180,6 @@ header nav .contact{
     border-radius: 3px;
     color: var(--text-color-blue);
 }
-/* */
 
 .bi.bi-question-circle{ 
     transition: 0.1s ease-in-out;
@@ -292,7 +276,6 @@ header nav .contact{
 }
 
 section.cards div.card:hover{
-    /* animation: pulse 1s infinite;  */
     transform: scale(103%);
     background-color: #ececec;
 }
@@ -365,13 +348,12 @@ section.cards div.card{
     min-height: 370px;
 }
 
-.cards:has(.card:hover) .card:not(:hover){ /* sudo select has (ter), o elemento possui algum atributo hover? se sim pegue o elemento que não tem o (atributo) e faça tal coisa */
+.cards:has(.card:hover) .card:not(:hover){
     opacity: .8;
     scale: .97;
 }
 
 section.cards div.card:hover{
-    /* animation: pulse 1s infinite;  */
     transform: scale(103%);
     background-color: #eee;
 }
@@ -532,6 +514,10 @@ section.cards div.card ul{
     font-weight: 500;
     margin-bottom: 20px;
     
+}
+
+section.cards div.card a{
+    color: var(--text-color-standard);
 }
 
 section.cards div.card.apex ul{
