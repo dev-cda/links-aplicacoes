@@ -534,6 +534,7 @@ section.cards div.card.grafana ul{
 }
 
 .button{
+    z-index: 0;
     opacity: 0.9;
     padding: 0.5rem 1rem;
     text-transform: uppercase;
