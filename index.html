@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CDA - Links Aplicações</title>
+    <title>CDA - Aplicações Web</title>
     <link rel="shortcut icon" type="png" href="./assets/img/logo_cda.png">
     <link rel="stylesheet" href="./assets/css/styles.css">
-    <script src="./assets/js/filter.js" defer></script>
+    <script src="./assets/js/script.js" defer></script>
 </head>
 <body>
     <header>
         <div class="cabecalho">
             <a href="#"><img src="./assets/img/logo_cdadistribuidora.png" alt="CDA-Distribuidora"></a>
             <nav>
-                <a href="#apex" class="link-apex">APEX</a>
-                <a href="#oxar" class="link-oxar">OXAR</a>
-                <a href="#grafana" class="link-grafana">GRAFANA</a>
+                <a href="#apex-section" class="link-apex">Apex</a>
+                <a href="#grafana-section" class="link-grafana">Grafana</a>
+                <a href="#oxar-section" class="link-oxar">Oxar</a>
             </nav>
         </div>
 
@@ -23,358 +23,41 @@
             <ul class="opções">
                 <input type="checkbox" id="opções-menu" class="opções__botão">
                 <label for="opções-menu" class="opções__rotulo">
-                    <li class="opções__item">Links Internet</li>
+                    <li class="opções__item">Internet</li>
                 </label>
-                <ul class="lista-menu">
-                    <li class="lista-menu__item">
-                        <a href="https://www.parnamirim.rn.gov.br/#/" class="lista-menu__link">Prefeitura de Parnamirim</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.natal.rn.gov.br/" class="lista-menu__link">Prefeitura de Natal</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.natal.rn.gov.br/semut/" class="lista-menu__link">Secretaria de Natal</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.gov.br/receitafederal/pt-br" class="lista-menu__link">Receita Federal</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://tdn.totvs.com/pages/releaseview.action?pageId=556376230" class="lista-menu__link">Consinco</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.bb.com.br/site/" class="lista-menu__link">Banco do Brasil</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://banco.bradesco/html/classic/index.shtm" class="lista-menu__link">Bradesco</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.claro.com.br/empresas" class="lista-menu__link">Claro empresas</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="http://www.gruponordestetelecom.com.br/" class="lista-menu__link">GNS Brasil</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.serasaexperian.com.br/" class="lista-menu__link">Serasa Experian</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.nfe.fazenda.gov.br/portal/principal.aspx" class="lista-menu__link">NF-e SEFAZ</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://192.168.1.50/eFormsColdweb/Account/Login" class="lista-menu__link">NDD Digital eCold</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://192.168.1.50/eFormseMonitor/Account/Login" class="lista-menu__link">NDD Digital e-monitor</a>
-                    </li>
-                    <li class="lista-menu__item">
-                        <a href="https://www.sefaz.rn.gov.br/contentProducao/aplicacao/set_v2/principal/enviados/index.asp" class="lista-menu__link">Secretaria do RN</a>
-                    </li>
-                </ul>
+                <ul class="lista-menu"></ul>
             </ul>
         </div>
     </header>
     
     <main>
-
+        <h1>Qual aplicação deseja?</h1>
         <div class="search">
         <div class="input-wrapper">
-            <h1>Qual aplicação deseja?</h1>
             <label for="filter" class="sr-only"></label>
-            <br>
             <div class="buscar">
-                <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
-                    <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
-                </svg>
-                <input onkeyup="filtrar()" id="filter" type="text" placeholder="Nome da aplicação">
-                <ul id="listApplications">
-                </ul>
+                <img src="./assets/img/lupa.png" alt="">
+                <input onkeyup="filtrar()" id="filter" type="text" placeholder=" Informe o nome da aplicação">
+                <ul id="listApplications"></ul>
             </div>
         </div>
         </div> 
 
-        <div class="description">
-            <h4>Links para Aplicações</h4>
-            <br>
-            <span>Bem-vindo(a) ao site de direcionamentos das Aplicações (Intranet e Internet) utilizadas pelos colaboradores da <b>CDA - Distribuidora</b>! Pesquise ou procure sua aplicação desejada logo abaixo. Quaisquer dúvidas ou sugestões entre em contato com o <b>Suporte de T.I.</b></span>
-        </div>
-
-
-        <span id="apex"></span>
-        <br><br><br>
-        <h1 class="card-title apex">APEX</h1>
-        <section class="cards">
-            
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Apoio Operacional</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=127:LOGIN_DESKTOP:14419115950046:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor apoio operacional</span>
-                <ul>
-                    <li>Apoio Operacional</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Controladoria</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=105:13:7627758951975:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor controladoria</span>
-                <ul>
-                    <li>Controladoria</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Frota</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=103:1:10486018797972:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor frota</span>
-                <ul>
-                    <li>Logística</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-            
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Logística WMS</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=201:LOGIN_DESKTOP:4749278614831:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor logística</span>
-                <ul>
-                    <li>Logística</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-            
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">SIMA - TI</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=104">Acessar</a>
-                <span>Utilizada para gerenciamento e manutenção da equipe de TI</span>
-                <ul>
-                    <li>Tecnologia</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Metas</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=179:LOGIN_DESKTOP:14656734396980:::::">Acessar</a>
-                <span>Para o acompanhamento e lançamento de metas</span>
-                <ul>
-                    <li>Suporte de Vendas</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Comercial</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=109:LOGIN_DESKTOP:11247251604556:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor comercial</span>
-                <ul>
-                    <li>Comercial</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">Sima - RH</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=102:LOGIN_DESKTOP:2896513722644:::::">Acessar</a>
-                <span>Utilização e demandas do setor de Recuros Humanos</span>
-                <ul>
-                    <li>Recursos Humanos</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-            
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Sala de Reunião</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=159:1">Acessar</a>
-                <span>Uma agenda para acompanhamento de compromissos/reuniões</span>
-                <ul>
-                    <li>Todos</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Financeiro</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=123:LOGIN_DESKTOP:2579330133645:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor financeiro</span>
-                <ul>
-                    <li>Financeiro</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Imóveis</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=116:1:5208263109915:::::">Acessar</a>
-                <span>Para a utilização e demandas da E Azevedo</span>
-                <ul>
-                    <li>E. AZEVEDO</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Vendas</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=131:3:8087539991616:::::">Acessar</a>
-                <span>Para utilização e demandas do setor vendas</span>
-                <ul>
-                    <li>Vendas</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Suporte de Vendas</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=302:LOGIN_DESKTOP:7728292815424:::::">Acessar</a>
-                <span>Para a utilização e demandas do suporte de vendas</span>
-                <ul>
-                    <li>Suporte de Vendas</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Televendas</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=129:2:16210414061887:::::">Acessar</a>
-                <span>Para a utilização e demandas do televendas</span>
-                <ul>
-                    <li>Vendas</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - ION</h3>
-                <a class="button apex" href="http://192.168.1.82/ords/wms/r/apex-ion/login">Acessar</a>
-                <span>Para consultar informações relacionadas ao ION</span>
-                <ul>
-                    <li>Vendas</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Segurança</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=142:2:14735657640166:::::">Acessar</a>
-                <span>Utilizado para gerar um token para um usuário da totvs</span>
-                <ul>
-                    <li>Tecnologia da Informação</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Faturamento</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=151:LOGIN_DESKTOP:604569085506:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor faturamento</span>
-                <ul>
-                    <li>Faturamento</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-            
-
-            <div class="card apex">
-                <div class="icon"></div>
-                <h3 class="card-title apex">APEX - Crédito & Cobrança</h3>
-                <a class="button apex" href="http://192.168.1.91:8080/ords/f?p=175:LOGIN_DESKTOP:16942620506287:::::">Acessar</a>
-                <span>Para a utilização e demandas do setor crédito e cobrança</span>
-                <ul>
-                    <li>Crédito e Cobrança</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
+        <br id="apex-section">
+        <br><br>
+        <section class="cards" id="apex">
         </section>
-
-        
-        <span id="oxar"></span>
-        <br><br><br>
-        <h1 class="card-title oxar">OXAR</h1>
-        <section class="cards">
-             <div class="card oxar">
-                <div class="icon"></div>
-                <h3 class="card-title oxar">OXAR - Agendamento</h3>
-                <a class="button oxar" href="https://oxar.appetiteapex.com/ords/f?p=202:LOGIN_DESKTOP:8253593899961:::::">Acessar</a>
-                <span>Possui relatórios de agendamento para o recebimento</span>
-                <ul>
-                    <li>Apoio Operacional</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-             <div class="card oxar">
-                <div class="icon"></div>
-                <h3 class="card-title oxar">OXAR - Agendador de Recebimentos</h3>
-                <a class="button oxar" href="https://oxar.appetiteapex.com/ords/f?p=139:1:23506254303631:::::">Acessar</a>
-                <span>Onde é possível agendar o recebimento de mercadorias</span>
-                <ul>
-                    <li>Apoio Operacional</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card oxar">
-                <div class="icon"></div>
-                <h3 class="card-title oxar">OXAR - Solicitação de preço</h3>
-                <a class="button oxar" href="https://oxar.appetiteapex.com/ords/f?p=110:LOGIN_DESKTOP:436864455025:::::">Acessar</a>
-                <span>Utilizado pelos supervisores para solicitar mudança de preços ao comercial</span>
-                <ul>
-                    <li>Apoio Operacional</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            </section>
-
-        <h1 class="card-title grafana" id="grafana">GRAFANA</h1>
-        <section class="cards">
-            
-            <div class="card grafana">
-                <div class="icon"></div>
-                <h3 class="card-title grafana">Grafana - Faturamento</h3>
-                <a class="button grafana" href="http://192.168.1.55:3000/d/uju5z4qmk/ds-cda-faturamento?orgId=1&refresh=5s">Acessar</a>
-                <span>Grafana com as informações do faturamento</span>
-                <ul>
-                    <li>Faturamento</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
-
-            <div class="card grafana">
-                <div class="icon"></div>
-                <h3 class="card-title grafana">Grafana - Comercial</h3>
-                <a class="button grafana" href="http://192.168.1.55:3000/d/GlKtcHWWk/ds-comercial?orgId=1&refresh=1m">Acessar</a>
-                <span>Grafana pertencente ao comercial</span>
-                <ul>
-                    <li>Comercial</li>
-                    <li>Intranet</li>
-                </ul>
-            </div>
+        <br id="grafana-section">
+        <br><br>
+        <section class="cards" id="grafana">
         </section>
+        <br id="oxar-section">
+        <br><br>
+        <section class="cards" id="oxar"></section><br>
     </main>
 
-    <footer class="footer">
-        <p class="footer-text">
-            © 2024 CDA Distribuidora. Todos os direitos reservados. 
-        </p>
+    <footer>
+        <p>© 2024 CDA Distribuidora. Todos os direitos reservados. </p>
     </footer>
-
 </body>
 </html>

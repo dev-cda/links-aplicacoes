@@ -1,778 +1,569 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Arsenal+SC:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=Noto+Color+Emoji&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 :root{
-    --font-family:"Poppins", sans-serif;
+  --body-background-color:  rgba(240, 243, 240, 0.4470588235);
+  --header-background-color: #f0f3f0;
+  --card-background-color: #f0f3f0;
+  --card-hover-background-color: #F8F8F8;
 
-    --background-body: #EFF2F1; 
-    --background-card: #f6f6f6;
-
-    --text-color-blue: #00346F;
-    --text-color-green: #008F20;
-    --text-color-red: #FF0013;
-    --text-color-yellow: #FFCC00;
-    --text-color-standard: #222;
-    --border-color: #ddd;
+  --color-main: #00346F;
+  --color-secondary-one: #FF0013;
+  --color-secondary-two: #008F20;
+  --color-secondary-three: #FFCC00;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--font-family);
-    scroll-behavior: smooth;
-    text-decoration: none;
-    list-style: none;
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+  scroll-behavior: smooth;
+  text-decoration: none;
+  list-style: none;
+  input:focus {outline: none;}
 }
 
-body{
-    background-color: var(--background-card);
-    color: var(--text-color-standard);
+body {
+  color: var(--color-main);
+  background-color: var(--body-background-color);
+  
 }
 
-header{
-    height: 4rem;
-    background-color: var(--background-body);
-    top: 0;
-    z-index: 1;
-    position: sticky;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    font-weight: 500;  
+header {
+  top: 0;
+  z-index: 11;
+  position: sticky;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  font-size: 1.1rem;
+  border-bottom: 1px Inset var(--color-main);
+  height: 4.5rem;
+  background: var(--header-background-color)
+}
+header a img {
+  position: absolute;
+  top: 18px;
+  left: 2rem;
+  width: 100px;
+}
+header nav {
+  display: flex;
+  gap: 10px;
 }
 
-header a img{
-    position: absolute;
-    top: 15px;
-    left: 2rem;
-    width: 100px;
+header nav a {
+  margin: 0px 20px;
+  border-radius: 1px;
+  text-transform: uppercase;
+  background-color: transparent;
+  text-decoration: none;
+  color: var(--color-main);
+  padding: 8px;
+  
+}
+header nav a:hover {
+  scale: 1.2;
+  opacity: 1;
+}
+header nav a.link-apex {
+  color: var(--color-main);
+}
+header nav a.link-oxar:hover {
+  color: var(--color-secondary-one);
+}
+header nav a.link-grafana:hover {
+  color: var(--color-secondary-two);
+}
+header .intranet {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+}
+header .intranet .opções .opções__item {
+  display: flex;
+  transition: 0.2s;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 3em;
+  text-transform: uppercase;
+}
+header .intranet .opções .opções__rotulo li {
+  gap: 15px;
+}
+header .intranet .opções img {
+  width: 25px;
+}
+header .intranet .opções .opções__botão {
+  display: none;
+}
+header .intranet .opções .opções__botão:checked ~ .lista-menu {
+  display: block;
+  width: auto;
+}
+header .intranet .opções .opções__botão:checked ~ .opções__rotulo > .opções__item {
+  color: #fff;
+  background: var(--color-secondary-three);
+}
+header .intranet .lista-menu {
+  display: none;
+  position: absolute;
+  top: 100%;
+
+  margin-right: 10px;
+}
+header .intranet .lista-menu .lista-menu__titulo,
+header .intranet .lista-menu .lista-menu__item {
+  border-radius: 3px;
+  text-align: center;
+  transition: 0.1s;
+  width: auto;
+  background-color: var(--card-background-color);
+  border: 1px solid var(--color-secondary-three);
+}
+header .intranet .lista-menu .lista-menu__item {
+  padding: 5px 0px;
+  min-width: 100px;
+  transition: 0.1s ease-in;
+}
+header .intranet .lista-menu .lista-menu__item span {
+  color: var(--color-main);
+}
+header .intranet .lista-menu .lista-menu__item:hover {
+  background-color: var(--color-secondary-three);
+  transform: scale(108%);
+}
+header .intranet .lista-menu__item:hover {
+  color: #fff;
+  background: var(--color-secondary-three);
+}
+header .intranet .lista-menu__item:hover span {
+  color: #fff;
+}
+header .intranet .lista-menu__item:hover > .lista-menu__link {
+  background-color: #fff;
+  text-decoration: none;
+}
+header .intranet .opções__rotulo .opções__item {
+  margin-right: 10px;
+  border-radius: 3px;
 }
 
-header nav{
-    display: flex;
-    gap: 35px;
-    text-transform: uppercase;
+main .search {
+  display: flex;
+  margin: auto;
+  margin: 150px 0px 150px 50px;
+  justify-content: center;
 }
 
-header nav a{
-    margin: 0px 15px ;
-    border-radius: 1px;
-    font-family: "Poppins";
-    color: var(--text-color-blue);
-    font-weight: 500;
-    background-color: transparent;
-    text-decoration: none;
+main .search .input-wrapper{
+  text-align: center;
+  width: 40%;
 }
 
- header nav a:hover{
-    color: var(--background-body);
-    background-color: var(--text-color-blue);
-    box-shadow: 0 0 0 0.6rem var(--text-color-blue);
+main h1 {
+  text-align: center;
+  margin: 150px 0px -120px 50px;
+  padding-right: 50px;
+  color: var(--color-main);
+  font-size: 2rem;
+  font-weight: 300;
+}
+main .search .input-wrapper img {
+  left: -42px;
+  position: absolute;
+  width: 50px;
+}
+main .search .buscar {
+  width: 100%;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+main .search .buscar input {
+  position: relative;
+  transition: 0.5s ease-in-out;
+  text-align: start;
+  min-width: 100%;
+  height: 50px;
+  padding: 0.5rem;
+  margin: auto;
+  border: 1px Ridge var(--color-main);
+  border-left: none;
+  border-top-right-radius: 12px;
+  border-bottom-right-radius: 12px;
+}
+main .search .buscar #listApplications {
+  z-index: 10;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  background-color: var(--header-background-color);
+  top: 50px;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+main .search .buscar #listApplications .item-name {
+  padding: 15px;
+  text-align: center;
+  margin: auto;
+}
+main .search .buscar #listApplications li {
+  transition: 0.2s ease-in-out;
+}
+main .search .buscar #listApplications li:hover {
+  transform: scale(102%);
+}
+main .search .buscar #listApplications li a {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  color: var(--color-main);
+  border-radius: 5px;
+  border: 1px solid var(--color-main);
+}
+main .search .buscar #listApplications li a:hover {
+  color: #fff;
+  border: 1px solid var(--color-main);
+  background-color: var(--color-main);
+}
+main .cards:has(.card:hover) .card:not(:hover) {
+  opacity: 0.7;
+  scale: 0.95;
+}
+main .cards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+main .cards .card {
+  transition: 0.2s ease-in-out;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: var(--card-background-color);
+  padding: 1rem;
+  border-radius: 20px;
+  height: 400px;
+  width: 500px;
+  margin-bottom: 20px;
+}
+main .cards .card .card-title {
+  max-width: 200px;
+  transition: 0.2s;
+  font-weight: 600;
+}
+main .cards .card h3 {
+  align-items: end;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 50px;
+  margin-bottom: 10px;
+  font-size: 1rem;
+  margin-top: 25px;
+  font-style: normal;
+  text-transform: capitalize;
+}
+main .cards .card span,
+main .cards .card ul {
+  font-size: 100%;
+  max-width: 300px;
+}
+main .cards .card span {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 1rem;
+}
+main .cards .card ul {
+  transition: 0.3s ease-in-out;
+  height: 10px;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+main .cards .card .card-title.apex {
+  color: var(--color-main);
+}
+main .cards .card .card-title.oxar {
+  color: var(--color-secondary-two);
+}
+main .cards .card .card-title.grafana {
+  color: var(--color-secondary-one);
+}
+main .cards .card .icon {
+  transition: 0.3s ease-in-out;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+  border-radius: 15px;
+  min-height: 80px;
+  width: 80px;
+}
+main .cards .card .button {
+  z-index: 0;
+  opacity: 0.9;
+  padding: 0.5rem 1rem;
+  text-transform: uppercase;
+  border: 0;
+  border-radius: 10px;
+  width: 60%;
+  cursor: pointer;
+  font-weight: 600;
+  font-size: 80%;
+  transition: 0.2s ease;
+}
+main .cards .card.apex .icon {
+  border: 1px Groove var(--color-main);
+  background-image: url(../img/oracle-apex-logo.png);
+  background-size: 80%;
+}
+main .cards .card.apex:hover .icon {
+  background-color: var(--color-main);
+}
+main .cards .card.oxar .icon {
+  border: 1px Groove var(--color-secondary-two);
+  background-image: url(../img/oxar.png);
+}
+main .cards .card.oxar:hover .icon {
+  background-color: var(--color-secondary-two);
+}
+main .cards .card.grafana .icon {
+  margin-top: 20px;
+  border: 1px Groove var(--color-secondary-one);
+  background-image: url(../img/grafana_icon.svg);
+  background-size: 50%;
+}
+main .cards .card:hover .icon {
+  background-color: var(--color-secondary-one);
+}
+main .cards .card:hover .card-title {
+  font-weight: 500;
+  scale: 1.1;
+}
+main .cards .card:hover {
+  transform: scale(103%);
+  background-color: var(--card-hover-background-color);
+}
+main .cards .card:hover ul {
+  scale: 1.1;
+}
+main .cards .card.apex:hover ul {
+  color: var(--color-main);
+}
+main .cards .card.oxar:hover ul {
+  color: var(--color-secondary-two);
+}
+main .cards .card.grafana:hover ul {
+  color: var(--color-secondary-one);
+  list-style-type: disc;
+}
+main .cards .button.apex,
+main .cards .button.grafana,
+main .cards .button.oxar {
+  color: var(--color-main);
+  border: 1px solid var(--color-main);
+}
+main .cards .card.apex:hover .button.apex {
+  color: #fff;
+  background-color: var(--color-main);
+}
+main .cards .card.oxar:hover .button.oxar {
+  color: #fff;
+  background-color: var(--color-secondary-two);
+}
+main .cards .card.grafana:hover .button.grafana {
+  color: #fff;
+  background-color: var(--color-secondary-one);
+}
+main .cards .card:hover {
+  border: 1px Groove;
+}
+main .cards .card:hover.apex {
+  border-color: var(--color-main);
+}
+main .cards .card:hover.oxar {
+  border-color: var(--color-secondary-two);
+}
+main .cards .card:hover.grafana {
+  border-color: var(--color-secondary-one);
+}
+main .cards .card:hover ul {
+  color: var(--color-main);
+}
+main .cards .card.oxar:hover ul {
+  color: var(--color-secondary-two);
+}
+main .cards .card.grafana:hover ul {
+  color: var(--color-secondary-one);
 }
 
-header nav .link-apex:hover{
-    background-color: var(--text-color-blue);
-    box-shadow: 0 0 0 0.6rem var(--text-color-blue);
+footer {
+  display: flex;
+  width: 100%;
+  padding: 1.5rem 6rem;
+  justify-content: center;
+  align-items: center;
+  background: #f0f3f0;
+}
+footer p {
+  color: var(--color-main);
+  text-align: center;
+  font-family: "Poppins";
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
 }
 
-header nav .link-oxar:hover{
-    background-color: var(--text-color-green);
-    box-shadow: 0 0 0 0.6rem var(--text-color-green);
+@media screen and (max-width: 900px) {
+  .lista-menu__item {
+    padding: 1px;
+  }
+  main .description {
+    margin: -50px 100px 100px;
+  }
 }
-
-header nav .link-grafana:hover{
-    background-color: var(--text-color-red);
-    box-shadow: 0 0 0 0.6rem var(--text-color-red);
-}
-
-
-header nav hr{
-    border: 0.1px solid var(--text-color-blue);
-    border-right: none;
-}
-
-header nav .contact{
-    position: absolute;
-    right: 30px;
-}
-
-.internet-link{
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-}
-
-.container__botao:checked~.container__rotulo {
-    background: #fff;
-}
-
-.intranet {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: absolute;
-    right: 20px;
-    font-family: 'Lato', sans-serif;
-}
-
-.lista-menu {
+@media screen and (max-width: 720px) {
+  header img {
     display: none;
-    position: absolute;
-    top: 102%;
-    width: 60vw;
-}
-
-.container__botao:checked~.lista-menu {
+  }
+  header nav a {
+    margin: 0px 8px;
+  }
+  .search img {
     display: block;
-}
-
-.lista-menu__titulo,
-.lista-menu__item { 
-    border-radius: 3px;
-    text-align: center;
-    transition: 0.1s;
-    width: auto;
-    background-color: var(--background-body);
-    border: 1px solid var(--text-color-blue);
-}
-
-.lista-menu__item{
-    transition: 0.2s ease-in;
-}
-
-.lista-menu__item:hover{
-    transform: scale(108%);
-}
-
-.lista-menu__titulo {
-    font-weight: 700;
-}
-
-.lista-menu__link {
-    background: var(--text-color-blue);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
-    text-transform: uppercase;
-    text-decoration: none;
-}
-    
-.container__botao {
-    display: none;
-}
-
-.container__titulo {
-    display: none;
-}
-
-.opções {
-    display: none;
-}
-
-.container__texto {
-    display: none;
-}
-
-.opções__item{
-    border-radius: 3px;
-    color: var(--text-color-blue);
-}
-
-.bi.bi-question-circle{ 
-    transition: 0.1s ease-in-out;
-    color: var(--text-color-blue);
-}
-
-.bi.bi-question-circle:hover{
-    color: var(--text-color-green);
-}
-
- .search{
-    width: 100%;
-    padding: 50px;
-    display: flex;
+  }
+  section.cards {
     flex-direction: column;
-    border-radius: 15px;
+  }
+}
+
+@media screen and (max-width: 620px)  {
+  header .intranet {
+    right: 0px;
+  }
+  header .intranet .opções .opções__item {
+    padding: 10px 1.3em;
+  }
+  main .search .input-wrapper{
+    width: 70%;
+  }
+}
+
+@media screen and (max-width: 460px) {
+  header{
+    font-size: 14px;
+    justify-content: initial;
+  }
+  header nav{
+    gap: 5px;
+  }
+  main .description {
+    margin: -50px 25px 100px;
+  }
+  .search {
+    margin-top: 100px;
+  }
+  .search input {
+    width: 70vw;
+  }
+
+  main h1 {
     text-align: center;
-    align-items: center;
-    margin-top: 60px;
-    margin-bottom: 120px;
-    justify-content: center;
-}
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin: 80px 0px -80px 50px;
+  }
 
- .input-wrapper h1{
-    margin-left: -30px;
-    text-transform: uppercase;
-    font-size: 2rem;
-    font-weight: 500;
-}
-
-.buscar{
-    width: 100%;
-    display: flex;
-    flex-flow: column;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-}
-
- .search input{
-    position: relative;
-    transition: 0.5s ease-in-out;
-    text-align: start;
-    width: 100%;
-    height: 50px;
-    padding: 0.5rem;
-    padding-left: 10px;
-    font-family: var(--font-family);
-    border: 1px solid var(--text-color-blue);
-    border-radius: 0px 10px 10px 0px;
-}
-
-.search input:focus{
-    background-color: #fff;
-}
-
-.bi.bi-search{
-    padding: 10px;
-    height: 50px;
-    width: 40px;
-    left: -9.5%;
-    position: absolute;
-    color: var(--background-card);
-    background: var(--text-color-blue);
-    cursor: pointer;
-    border-radius: 10px 0px 0px 10px;
-}
-
-#listApplications{
-    z-index: 10;
-    display: none;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    background-color: var(--background-body);
-    top: 50px;
-    width: 100%;
-    margin: 0;
-    padding: 0;
-}
-
-#listApplications li{
-    border: none;
-    transition: 0.2s ease-in-out;
-}
-
-#listApplications li:hover{
-    transform: scale(102%);
-}
-
-#listApplications li a:hover{
-    border: 1px solid var(--text-color-blue);
-    background-color: #00346F;
-}
-
-section.cards div.card:hover{
-    transform: scale(103%);
-    background-color: #ececec;
-}
-
-#listApplications li a{
-    display: flex;
-    align-items: center;
-    font-size: 18px;
-    color: var(--text-color-blue);
-    border-radius: 5px;
-    border: 1px solid var(--text-color-blue);
-}
-
-#listApplications li a:hover{
-    color: #fff;
-    background-color: #00346F;
-}
-
-.item-name{
-    padding: 10px;
-    text-align: center;
+  .card-title {
     margin: auto;
-}
+    width: 20vh;
+  }
 
-.input-wrapper h1{
-    color: var(--text-color-blue);
-}
-
-main .description{
-    border-radius: 15px;
-    padding: 50px;
-    background-color: var(--background-body);
-    color: var(--text-color-standard);
-    font-size: 1.1rem;
-    margin: -50px 350px 100px;
-    text-align: center;
-    line-height: 120%;
-}
-
-b,h4{
-    color: var(--text-color-blue);
-    font-weight: 600;
-}
-
-main .card-title{
-    transition: 0.2s;
-    text-align: center;
-    font-weight: 450;
-}
-
-section.cards{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 40px 25px 80px 25px;
-}
-
-section.cards div.card{
-    transition: 0.2s ease-in-out;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background-color: var(--background-body);
-    padding: 1.5rem;
-    border-radius: 15px;
-    margin: 0px 0px;
-    min-height: 370px;
-}
-
-.cards:has(.card:hover) .card:not(:hover){
-    opacity: .8;
-    scale: .97;
-}
-
-section.cards div.card:hover{
-    transform: scale(103%);
-    background-color: #eee;
-}
-
-section.cards div.card:hover ul{
-    scale: 1.1;
-}
-
-section.cards div.card:hover .card-title{
-    font-weight: 500;
-    scale: 1.1;
-}
-
-section.cards div.card:hover .button.apex{
-    color: #fff;
-    background-color: var(--text-color-blue);
-}
-
-section.cards div.card:hover .button.oxar{
-    color: #fff;
-    background-color: var(--text-color-green);
-}
-
-section.cards div.card:hover .button.grafana{
-    color: #fff;
-    background-color: var(--text-color-red);
-}
-
-section.cards div.card:hover.apex{
-    border: 1px solid var(--text-color-blue);
-}
-
-section.cards div.card:hover.oxar{
-    border: 1px solid var(--text-color-green);
-}
-
-section.cards div.card:hover.grafana{
-    border: 1px solid var(--text-color-red);
-}
-
-section.cards div.card .button.apex{
-    border: 1px solid var(--text-color-blue);
-}
-section.cards div.card .button.oxar{
-    border: 1px solid var(--text-color-green);
-}
-section.cards div.card .button.grafana{
-    border: 1px solid var(--text-color-red);
-}
-
-section.cards div.card.apex button:hover{
-    color: #fff;
-    background-color: var(--text-color-blue);
-}
-
-section.cards div.card.oxar button:hover{
-    color: #fff;
-    background-color: var(--text-color-green);
-}
-
-section.cards div.card.grafana button:hover{
-    color: #fff;
-    background-color: var(--text-color-red);
-}
-
-.card-title.apex{
-    color: var(--text-color-blue);
-}
-
-.card-title.oxar{
-    color: var(--text-color-green);
-}
-
-.card-title.grafana{
-    color: var(--text-color-red);
-}
-
-section.cards div.card:hover ul{
-    opacity: 1;
-    color: var(--text-color-blue);
-}
-
-section.cards div.card.oxar:hover ul{
-    color: var(--text-color-green);
-}
-
-section.cards div.card.grafana:hover ul{
-    color: var(--text-color-red);
-}
-
-section.cards div.card .icon{
+  main .cards .card .icon {
     transition: 0.3s ease-in-out;
     background-position: center;
     background-repeat: no-repeat;
     padding: 10px;
-    border-radius: 10px;
-    background-color: var(--background-body);
-    min-height: 80px;
-    width: 80px;
-}
-section.cards div.card.apex .icon{
-    border: 1px solid var(--text-color-blue);
-}
-section.cards div.card.oxar .icon{
-    border: 1px solid var(--text-color-green);
-}
-section.cards div.card.grafana .icon{
-    border: 1px solid var(--text-color-red);
-}
-
-
-section.cards div.card.apex .icon{
-    background-image: url(../img/oracle-apex-logo.png);
-    background-size: 90%;
-}
-
-section.cards div.card.apex:hover .icon{
-    background-color: var(--text-color-blue);
-}
-
-section.cards div.card.oxar .icon{
-    background-image: url(../img/oxar.png);
-}
-
-section.cards div.card.oxar:hover .icon{
-    background-color: var(--text-color-green);
-}
-
-section.cards div.card.grafana .icon{
-    background-image: url(../img/grafana_icon.svg);
-    background-size: 50%;
-}
-
-section.cards div.card.grafana:hover .icon{
-    background-color: var(--text-color-red);
-}
-
-section.cards div.card h3{
-    font-size: 1rem;
-    margin: 20px 0;
-}
-
-section.cards div.card span,
-section.cards div.card ul{
-    font-size: 90%;
-    max-width: 300px;
-}
-
-section.cards div.card span{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-size: 1rem;
-}
-
-section.cards div.card ul{
-    transition: 0.3s ease-in-out;
-    height: 10px;
-    font-weight: 500;
-    margin-bottom: 20px;
-    
-}
-
-section.cards div.card a{
-    color: var(--text-color-standard);
-}
-
-section.cards div.card.apex ul{
-    color: var(--text-color-blue);
-}
-
-section.cards div.card.oxar ul{
-    color: var(--text-color-green);
-}
-
-section.cards div.card.grafana ul{
-    color: var(--text-color-red);
-    list-style-type: disc;
-}
-
-.button{
-    z-index: 0;
-    opacity: 0.9;
-    padding: 0.5rem 1rem;
-    text-transform: uppercase;
-    border: 0;
-    border-radius: 5px;
-    width: 70%;
-    cursor: pointer;
-    font-size: 80%;
-    font-weight: 500;
-    transition: 0.3s ease;
-}
-
-.footer {
-    display: flex;
-    width: 100%;
-    padding: 1.5rem 6rem;
-    justify-content: center;
-    align-items: center;
-    background: var(--background-body);
-}
-
-.footer-text {
-    color: var(--text-color-blue);
+    border-radius: 15px;
+    width: 68px;
+  }
+  
+  .search{
     text-align: center;
-    font-family: Montserrat;
-    font-size: 1.3rem;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 150%;
+    align-items: center;
+  }
+  main .search{
+    width: 15vw;
+    margin-top: 100px;
+    margin-left: 70px;
+  }
+
+  main .search .buscar input {
+    margin-left: 10px;
+    height: 45px;
+  }
+  main .buscar img{
+    margin-left: 10px;
+    height: 45px;
+  }
+  main .search .buscar #listApplications {
+    left: 10px;
+    top: 45px;
+    width: 70vw;
+  }
+  main .search .buscar #listApplications .item-name {
+    padding: 5px;
+    text-align: center;
+    margin: auto;
+  }
+
+main .cards .card {
+  padding: 1.5rem;
+  height: 350px;
+  width: 80%;
 }
-
-@media screen and (min-width: 1728px) {
-    .lista-menu__item{
-    padding: 10px;
+main .cards .card .card-title {
+  width: auto;
 }
-
-    .container__link {
-        display: flex;
-        align-items: center;
-        text-decoration: none;
-    }
-
-    .intranet {
-        padding: 0 2em;
-    }
-
-    .container__texto {
-        display: block;
-    }
+main .cards .card h3 {
+  font-size: 0.8rem;
 }
-
-@media screen and (max-width: 1440px){
-    .lista-menu__item{
-        padding: 10px;
-    }
-
-    section.cards{
-        margin: 50px 30px;
-    }
-
-    section.cards div.card{
-        margin: 0px 0px;
-    }
+main .cards .card .icon {
+  border-radius: 15px;
+  min-height: 70px;
 }
-
-@media screen and (min-width: 1024px) {
-    .lista-menu__item{
-        padding: 3px;
-    }
-
-    .container__titulo {
-        color: var(--text-color-blue);
-        margin-left: 100px;
-        font-family: var(--fonte-secundario);
-        font-size: 30px;
-    }
-
-    .container__titulo {
-        position: absolute;
-        font-weight: 400;
-        display: block;
-        margin-left: 50px;
-    }
-
-    .opções {
-        display: flex;
-    }
-
-    .opções__item {
-        display: flex;
-        transition: 0.6s;
-        cursor: pointer;
-        align-items: center;
-        justify-content: center;
-        text-transform: uppercase;
-        gap: 10px;
-    }
-
-    .opções__link {
-        position: absolute;
-        text-decoration: none;
-        color: var(--text-color-blue);
-    }
-
-    .opções__link:hover{
-        color: var(--color-links);
-    }
-
-
-    .opções__botão:checked~.lista-menu {
-        display: block;
-        width: auto;
-    }
-
-    .opções__botão {
-        display: none;
-    }
-
-    .opções__botão:checked~.opções__rotulo>.opções__item {
-        color: #ccc;
-        background: var(--text-color-blue);
-    }
-
-    .opções__item {
-        padding: 12px 2em;
-    }
-    
-    .lista-menu__item:hover {
-        background: var(--text-color-blue);
-    }
-
-    .lista-menu__item:hover>.lista-menu__link {
-        background-color: #fff;
-        text-decoration: none;
-    }
-
 }
+@media screen and (max-width: 460px) and (max-width: 360px) {
+  .search input {
+    width: 70vw;
+    margin-left: 30px;
+  }
 
-@media screen and (max-width: 900px){
-    .lista-menu__item{
-        padding: 6px;
-    }
-    
-    main .description{
-        margin: -50px 100px 100px;
-    }
-}
+  .opções__item,
+  header nav {
+    font-size: 12px;
+    gap: 0px;
+  }
 
-@media screen and (max-width: 720px){
+  header nav a{
+    margin: 0px;
+  }
 
-    header nav .contact{
-        right: 5px;
-    }
-
-    header nav .contact span{
-        display: none;
-    }
-
-    header{
-        justify-content: center;
-    }
-
-    header img{
-        display: none;
-    }
-
-    header nav a{
-        margin: 0px 8px;
-    }
-
-    .search img{
-        display: block;
-    }
-
-    section.cards{
-        flex-direction: column;
-    }
-
-    header nav .help-link{
-        position: absolute;
-        right: 7px;
-    }
-}
-
-
-@media screen and (max-width: 460px){
-    main .description{
-        margin: -50px 25px 100px;
-    }
-
-    .search{
-        margin-top: 100px;
-    }
-
-    .bi-search{
-        margin-left: 35px;
-    }
-
-    .search input{
-        margin-left: 35px;
-        width: 80vw;
-    }
-
-    .search h1{
-        font-size: 1.5rem;
-        margin: 0px auto;
-    }
-    .card-title{
-        margin: auto;
-        width: 20vh;
-    }
-
-    header nav{
-        gap: 10px;
-    }
-
-    header nav .help-link{
-        right: 0px;
-    }
-
-}
-
-@media screen and (max-width: 360px){
-
-    .search input{
-        width: 70vw;
-        margin-left: 30px;
-    }
-
-    header nav{
-        gap: 5px;
-    }
-
-    header nav .internet-link{
-        opacity: 0;
-    }
-    
-    .bi-search{
-        margin-left: 16px;
-    }
+  main .search{
+    margin-left: 50px;
+  }
 }
